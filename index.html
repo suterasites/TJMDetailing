@@ -131,12 +131,16 @@
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(4px);
       border-bottom: 1px solid var(--white);
-      transition: all 0.3s ease;
+      transition: transform 0.35s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
 
     .nav.scrolled {
       background: rgba(0, 0, 0, 0.6);
       box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+
+    .nav.nav-hidden {
+      transform: translateY(-100%);
     }
 
     .nav .container {
@@ -1902,10 +1906,18 @@
        JAVASCRIPT
   ===================== -->
   <script>
-    // Nav scroll effect
+    // Nav scroll effect — hide on scroll down, show on scroll up
     const nav = document.getElementById('nav');
+    let lastScrollY = window.scrollY;
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      nav.classList.toggle('scrolled', currentScrollY > 50);
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+      lastScrollY = currentScrollY;
     });
 
     // Mobile menu
