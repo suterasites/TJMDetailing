@@ -177,6 +177,10 @@
 - **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
+## Deployment
+- **Always commit and push after making changes.** After every set of changes, commit to `main` and `git push origin main`. Vercel auto-deploys from the `main` branch on GitHub (`suterasites/TJMDetailing`).
+- Do not wait for the user to ask — push is part of completing a task.
+
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
 - Do not "improve" a reference design — match it
