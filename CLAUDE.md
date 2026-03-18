@@ -9,6 +9,14 @@
 - **Insurance:** Fully Insured
 - **Phone:** 0447 418 866
 - **Booking Policy:** Bookings Essential
+- **Logo:** `Assets/TJM detailing logo FA.png` (grey "T", red "JM", dark grey "DETAILING" — used for both branches)
+
+## Business Branches
+
+TJM Detailing has **two main service branches**:
+
+1. **Auto Detailing** — vehicle detailing and maintenance services
+2. **Gardening & Yard Maintenance** — lawn and garden care services
 
 ---
 
@@ -109,6 +117,20 @@
 
 ---
 
+---
+
+## Gardening & Yard Maintenance Services
+
+- Lawn Mowing
+- Edging and Whipper Snipping
+- Hedge Trimming
+- Weeding Garden Beds
+- Removal of green waste
+- General Yard Tidy
+- Clearing leaves and debris
+
+---
+
 ## Key Selling Points (for website copy)
 
 - **Weekend-only availability** — convenient for customers who work weekdays
@@ -162,7 +184,8 @@
 - Mobile-first responsive
 
 ## Brand Assets
-- Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
+- **Logo:** `Assets/TJM detailing logo FA.png` — the current logo for both branches (Auto Detailing and Gardening & Yard Maintenance). Brand colors from logo: grey (#808080), red (#CC0000), dark grey (#4A4A4A).
+- Always check the `Assets/` and `brand_assets/` folders before designing. They may contain logos, color guides, style guides, or images.
 - If assets exist there, use them. Do not use placeholders where real assets are available.
 - If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
 
