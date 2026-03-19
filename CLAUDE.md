@@ -210,7 +210,7 @@ TJM Detailing has **two main service branches**:
 - Do not stop after one screenshot pass
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
-- Do not use em dashes anywhere - in code, copy, titles, alt text, or documentation. Use hyphens (-) instead.
+- Do not use em dashes or en dashes anywhere - no Unicode characters, no `&mdash;`, no `&ndash;`, no `&#8212;`, no `&#8211;`. Use regular hyphens (-) instead.
 
 ## Multi-Page Consistency
 - **Navbar:** The navbar must be identical across all pages. If the navbar is modified on any page, apply the same change to every other page immediately.
