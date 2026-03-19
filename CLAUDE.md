@@ -1,4 +1,4 @@
-# TJM Detailing — Business Reference
+# TJM Detailing - Business Reference
 
 ## Brand Overview
 
@@ -9,14 +9,14 @@
 - **Insurance:** Fully Insured
 - **Phone:** 0447 418 866
 - **Booking Policy:** Bookings Essential
-- **Logo:** `Assets/TJM detailing logo FA.png` (grey "T", red "JM", dark grey "DETAILING" — used for both branches)
+- **Logo:** `Assets/TJM detailing logo FA.png` (grey "T", red "JM", dark grey "DETAILING" - used for both branches)
 
 ## Business Branches
 
 TJM Detailing has **two main service branches**:
 
-1. **Auto Detailing** — vehicle detailing and maintenance services
-2. **Gardening & Yard Maintenance** — lawn and garden care services
+1. **Auto Detailing** - vehicle detailing and maintenance services
+2. **Gardening & Yard Maintenance** - lawn and garden care services
 
 ---
 
@@ -38,7 +38,7 @@ TJM Detailing has **two main service branches**:
 
 > **Note:** All prices are in AUD. Prices may vary upon inspection of the vehicle.
 
-### Headlight Restoration — A$100 | 45 mins
+### Headlight Restoration - A$100 | 45 mins
 
 - Removes oxidation and cloudiness
 - Restores clarity & improves night visibility
@@ -133,12 +133,12 @@ TJM Detailing has **two main service branches**:
 
 ## Key Selling Points (for website copy)
 
-- **Weekend-only availability** — convenient for customers who work weekdays
-- **100% 5-star reviews** — strong social proof
-- **Fully insured** — professional and trustworthy
-- **Mobile/local service** — servicing Melbourne's West
-- **Tiered pricing** — options for every budget, from a quick interior clean to a full detail
-- **Vehicle-size pricing** — fair pricing based on hatch/sedan, SUV/4WD, or small truck
+- **Weekend-only availability** - convenient for customers who work weekdays
+- **100% 5-star reviews** - strong social proof
+- **Fully insured** - professional and trustworthy
+- **Mobile/local service** - servicing Melbourne's West
+- **Tiered pricing** - options for every budget, from a quick interior clean to a full detail
+- **Vehicle-size pricing** - fair pricing based on hatch/sedan, SUV/4WD, or small truck
 
 ---
 
@@ -151,7 +151,7 @@ TJM Detailing has **two main service branches**:
 - A **reviews/testimonials** section would reinforce the 100% 5-star rating.
 - The **"Prices may vary upon inspection"** disclaimer should appear near pricing.
 
-# CLAUDE.md — Frontend Website Rules
+# CLAUDE.md - Frontend Website Rules
 
 ## Always Do First
 - **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
@@ -162,7 +162,7 @@ TJM Detailing has **two main service branches**:
 - Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
 
 ## Local Server
-- **Always serve on localhost** — never screenshot a `file:///` URL.
+- **Always serve on localhost** - never screenshot a `file:///` URL.
 - Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
 - `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
 - If the server is already running, do not start a second instance.
@@ -173,7 +173,7 @@ TJM Detailing has **two main service branches**:
 - Screenshots are saved automatically to `./temporary screenshots/screenshot-N.png` (auto-incremented, never overwritten).
 - Optional label suffix: `node screenshot.mjs http://localhost:3000 label` → saves as `screenshot-N-label.png`
 - `screenshot.mjs` lives in the project root. Use it as-is.
-- After screenshotting, read the PNG from `temporary screenshots/` with the Read tool — Claude can see and analyze the image directly.
+- After screenshotting, read the PNG from `temporary screenshots/` with the Read tool - Claude can see and analyze the image directly.
 - When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
 - Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing
 
@@ -184,10 +184,10 @@ TJM Detailing has **two main service branches**:
 - Mobile-first responsive
 
 ## Brand Assets
-- **Logo:** `Assets/TJM detailing logo FA.png` — the current logo for both branches (Auto Detailing and Gardening & Yard Maintenance). Brand colors from logo: grey (#808080), red (#CC0000), dark grey (#4A4A4A).
+- **Logo:** `Assets/TJM detailing logo FA.png` - the current logo for both branches (Auto Detailing and Gardening & Yard Maintenance). Brand colors from logo: grey (#808080), red (#CC0000), dark grey (#4A4A4A).
 - Always check the `Assets/` and `brand_assets/` folders before designing. They may contain logos, color guides, style guides, or images.
 - If assets exist there, use them. Do not use placeholders where real assets are available.
-- If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+- If a logo is present, use it. If a color palette is defined, use those exact values - do not invent brand colors.
 
 ## Anti-Generic Guardrails
 - **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Pick a custom brand color and derive from it.
@@ -197,16 +197,22 @@ TJM Detailing has **two main service branches**:
 - **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
 - **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
 - **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
+- **Spacing:** Use intentional, consistent spacing tokens - not random Tailwind steps.
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
 ## Deployment
 - **Always commit and push after making changes.** After every set of changes, commit to `main` and `git push origin main`. Vercel auto-deploys from the `main` branch on GitHub (`suterasites/TJMDetailing`).
-- Do not wait for the user to ask — push is part of completing a task.
+- Do not wait for the user to ask - push is part of completing a task.
 
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
-- Do not "improve" a reference design — match it
+- Do not "improve" a reference design - match it
 - Do not stop after one screenshot pass
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
+- Do not use em dashes anywhere - in code, copy, titles, alt text, or documentation. Use hyphens (-) instead.
+
+## Multi-Page Consistency
+- **Navbar:** The navbar must be identical across all pages. If the navbar is modified on any page, apply the same change to every other page immediately.
+- **Footer:** The footer must be identical across all pages. If the footer is modified on any page, apply the same change to every other page immediately.
+- **Internal links:** All text links that reference a page on the site must link to the correct page URL. When a new page is created, scan all existing pages and update any mentions of that topic to link to the new page.
