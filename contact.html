@@ -590,7 +590,7 @@
                         <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-2">SEND A MESSAGE</h2>
                         <p class="text-g text-sm mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
-                        <form id="contactForm" class="space-y-5">
+                        <form id="contactForm" action="https://formspree.io/f/meernbpl" method="POST" class="space-y-5">
                             <!-- Name + Phone row -->
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <div>
@@ -859,9 +859,29 @@
 
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Hide form, show success
-            contactForm.style.display = 'none';
-            formSuccess.classList.remove('hidden');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg> Sending...';
+
+            fetch('https://formspree.io/f/meernbpl', {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    formSuccess.classList.remove('hidden');
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    alert('Something went wrong. Please try again or call us directly.');
+                }
+            }).catch(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                alert('Something went wrong. Please try again or call us directly.');
+            });
         });
 
         // Mobile Menu
