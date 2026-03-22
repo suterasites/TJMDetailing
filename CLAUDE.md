@@ -130,7 +130,6 @@ TJM Detailing has **two main service branches**:
 - Weeding Garden Beds
 - Removal of green waste
 - General Yard Tidy
-- Clearing leaves and debris
 
 ---
 
