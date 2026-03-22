@@ -12,10 +12,10 @@
         theme: {
             extend: {
                 colors: {
-                    d: { 950: '#08090e', 900: '#0f1117', 800: '#1b1f2b', 700: '#232837', 600: '#2e3345' },
+                    d: { 950: '#ffffff', 900: '#f7f7f8', 800: '#f0f0f0', 700: '#e8e8e8', 600: '#e0e0e0' },
                     r: { DEFAULT: '#CC0000', dark: '#990000', light: '#E61A1A' },
                     steel: { DEFAULT: '#4f6f87', dark: '#3d5a6e', light: '#6a8da6' },
-                    g: { DEFAULT: '#8e8e8e', light: '#c4c3c4' },
+                    g: { DEFAULT: '#666666', light: '#888888' },
                     lawn: { DEFAULT: '#3a7d44', dark: '#2a5e32', deep: '#1a3f20' },
                 },
                 fontFamily: {
@@ -33,7 +33,7 @@
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #08090e; color: #fff; }
+        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a1a1a; }
         h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Teko', sans-serif; letter-spacing: -0.02em; }
         p, li { line-height: 1.7; }
 
@@ -51,7 +51,7 @@
 
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #08090e; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
         ::-webkit-scrollbar-thumb { background: #CC0000; border-radius: 3px; }
 
         /* Buttons */
@@ -75,8 +75,8 @@
         .btn-red:active { transform: translateY(0); }
 
         .btn-outline {
-            border: 1.5px solid rgba(255,255,255,0.25);
-            color: #fff;
+            border: 1.5px solid rgba(0,0,0,0.15);
+            color: #1a1a1a;
             padding: 0.75rem 2rem;
             font-weight: 500;
             border-radius: 4px;
@@ -87,8 +87,8 @@
         }
         .btn-outline:hover {
             transform: translateY(-2px);
-            border-color: rgba(255,255,255,0.5);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.04);
         }
         .btn-outline:focus-visible { outline: 2px solid #4f6f87; outline-offset: 3px; }
         .btn-outline:active { transform: translateY(0); }
@@ -178,7 +178,7 @@
         }
         .service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 50px -12px rgba(204, 0, 0, 0.12), 0 8px 20px -8px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 50px -12px rgba(204, 0, 0, 0.12), 0 8px 20px -8px rgba(0,0,0,0.08);
         }
 
         /* Image zoom */
@@ -209,7 +209,7 @@
             background: #CC0000;
             transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .nav-link:hover { color: #fff; }
+        .nav-link:hover { color: #CC0000; }
         .nav-link:hover::after { width: 100%; }
         .nav-link:focus-visible { outline: 2px solid #CC0000; outline-offset: 4px; border-radius: 2px; }
 
@@ -219,7 +219,7 @@
         }
         .lawn-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 40px -10px rgba(58, 125, 68, 0.15), 0 6px 16px -6px rgba(0,0,0,0.3);
+            box-shadow: 0 16px 40px -10px rgba(58, 125, 68, 0.15), 0 6px 16px -6px rgba(0,0,0,0.06);
         }
     </style>
 </head>
@@ -227,7 +227,7 @@
 <body class="antialiased overflow-x-hidden">
 
     <!-- ============ NAVBAR ============ -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-white/5">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 md:h-[72px]">
             <a href="#" class="flex-shrink-0" aria-label="TJM Detailing Home">
                 <img src="Assets/TJM detailing logo FA.png" alt="TJM Detailing" class="h-10 md:h-12 w-auto">
@@ -246,7 +246,7 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 720px; left: 50%; transform: translateX(-50%) translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <!-- Red accent bar -->
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
                             <div class="p-6">
@@ -258,7 +258,7 @@
                                             <a href="interior-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Interior Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Interior Detail</span>
                                                         <span class="text-r text-xs font-bold">From $55</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Vacuum, wipe down, windows - 1 hr</p>
@@ -267,7 +267,7 @@
                                             <a href="exterior-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Exterior Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Exterior Detail</span>
                                                         <span class="text-r text-xs font-bold">From $55</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Hand wash, wheels, tyres, dry - 1 hr</p>
@@ -276,7 +276,7 @@
                                             <a href="maintenance-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Maintenance Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Maintenance Detail</span>
                                                         <span class="text-r text-xs font-bold">From $85</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Full interior + exterior - 1.5-2 hrs</p>
@@ -285,7 +285,7 @@
                                             <a href="full-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Full Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Full Detail</span>
                                                         <span class="text-r text-xs font-bold">From $265</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Steam clean, stain removal, UV protect - 2.5+ hrs</p>
@@ -294,7 +294,7 @@
                                             <a href="headlight-restoration.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Headlight Restoration</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Headlight Restoration</span>
                                                         <span class="text-r text-xs font-bold">$100</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Remove oxidation, restore clarity - 45 min</p>
@@ -304,24 +304,24 @@
                                     </div>
 
                                     <!-- Side Panel -->
-                                    <div class="w-56 flex-shrink-0 border-l border-white/5 pl-6">
+                                    <div class="w-56 flex-shrink-0 border-l border-black/5 pl-6">
                                         <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Quick Info</p>
                                         <div class="space-y-4">
                                             <div>
-                                                <p class="text-white text-xs font-semibold mb-1">Vehicle Pricing</p>
+                                                <p class="text-gray-900 text-xs font-semibold mb-1">Vehicle Pricing</p>
                                                 <div class="space-y-1 text-xs text-g">
                                                     <div class="flex justify-between"><span>Hatch / Sedan</span><span class="text-g-light">Base price</span></div>
                                                     <div class="flex justify-between"><span>SUV / 4WD</span><span class="text-g-light">+$10-20</span></div>
                                                     <div class="flex justify-between"><span>Small Truck</span><span class="text-g-light">From $190</span></div>
                                                 </div>
                                             </div>
-                                            <div class="border-t border-white/5 pt-3">
-                                                <a href="about-auto-detailing.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-white mb-3" style="transition: color 0.2s ease;">
+                                            <div class="border-t border-black/5 pt-3">
+                                                <a href="about-auto-detailing.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-gray-900 mb-3" style="transition: color 0.2s ease;">
                                                     About Our Detailing
                                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                                 </a>
                                             </div>
-                                            <div class="border-t border-white/5 pt-3">
+                                            <div class="border-t border-black/5 pt-3">
                                                 <p class="text-g text-[11px] italic leading-relaxed">Prices may vary upon inspection of the vehicle.</p>
                                             </div>
                                             <a href="auto-detailing.html" class="flex items-center gap-2 text-r text-xs font-semibold hover:text-r-light" style="transition: color 0.2s ease;">
@@ -343,7 +343,7 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 600px; left: 50%; transform: translateX(-50%) translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-lawn to-transparent"></div>
                             <div class="p-6">
                                 <div class="flex gap-6">
@@ -353,43 +353,43 @@
                                         <div class="grid grid-cols-2 gap-0.5">
                                             <a href="lawn-mowing.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Lawn Mowing</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Lawn Mowing</span>
                                                     <span class="text-g text-[11px]">Even, clean cut</span>
                                                 </div>
                                             </a>
                                             <a href="edging-whipper-snipping.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Edging &amp; Snipping</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Edging &amp; Snipping</span>
                                                     <span class="text-g text-[11px]">Crisp defined edges</span>
                                                 </div>
                                             </a>
                                             <a href="hedge-trimming.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Hedge Trimming</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Hedge Trimming</span>
                                                     <span class="text-g text-[11px]">Neat, shaped hedges</span>
                                                 </div>
                                             </a>
                                             <a href="weeding-garden-beds.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Weeding</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Weeding</span>
                                                     <span class="text-g text-[11px]">Garden bed care</span>
                                                 </div>
                                             </a>
                                             <a href="green-waste-removal.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Green Waste</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Green Waste</span>
                                                     <span class="text-g text-[11px]">Removal &amp; disposal</span>
                                                 </div>
                                             </a>
                                             <a href="general-yard-tidy.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">General Yard Tidy</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">General Yard Tidy</span>
                                                     <span class="text-g text-[11px]">Full clean-up</span>
                                                 </div>
                                             </a>
                                             <a href="clearing-leaves-debris.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group col-span-2">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Clearing Leaves &amp; Debris</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Clearing Leaves &amp; Debris</span>
                                                     <span class="text-g text-[11px]">Thorough clearing of all outdoor areas</span>
                                                 </div>
                                             </a>
@@ -397,12 +397,12 @@
                                     </div>
 
                                     <!-- Side CTA -->
-                                    <div class="w-44 flex-shrink-0 border-l border-white/5 pl-6 flex flex-col justify-between">
+                                    <div class="w-44 flex-shrink-0 border-l border-black/5 pl-6 flex flex-col justify-between">
                                         <div>
                                             <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing</p>
                                             <p class="text-g text-xs leading-relaxed mb-4">Pricing varies by property size and scope of work. Call for a free quote.</p>
                                         </div>
-                                        <a href="about-gardening.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-white mb-3" style="transition: color 0.2s ease;">
+                                        <a href="about-gardening.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-gray-900 mb-3" style="transition: color 0.2s ease;">
                                             About Yard Care
                                             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                         </a>
@@ -427,24 +427,24 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 380px; right: 0; left: auto; transform: translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
                             <div class="p-6">
                                 <div class="space-y-5">
                                     <!-- Phone -->
                                     <a href="tel:0447418866" class="flex items-center gap-4 group">
                                         <div>
-                                            <p class="text-white text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
+                                            <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
                                             <p class="text-g text-xs">Call to book your appointment</p>
                                         </div>
                                     </a>
 
-                                    <div class="border-t border-white/5"></div>
+                                    <div class="border-t border-black/5"></div>
 
                                     <!-- Hours -->
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Weekend Only</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Weekend Only</p>
                                             <p class="text-g text-xs">Sat &amp; Sun: 8:00 AM - 5:00 PM</p>
                                         </div>
                                     </div>
@@ -452,7 +452,7 @@
                                     <!-- Location -->
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Melbourne's West</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Melbourne's West</p>
                                             <p class="text-g text-xs">Mobile service - we come to you</p>
                                         </div>
                                     </div>
@@ -460,12 +460,12 @@
                                     <!-- Insurance -->
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Fully Insured</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Fully Insured</p>
                                             <p class="text-g text-xs">Professional, trustworthy service</p>
                                         </div>
                                     </div>
 
-                                    <div class="border-t border-white/5 pt-4">
+                                    <div class="border-t border-black/5 pt-4">
                                         <a href="contact.html" class="btn-red text-sm w-full justify-center">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             Book an Appointment
@@ -480,7 +480,7 @@
 
             <!-- Desktop CTA -->
             <div class="hidden lg:flex items-center gap-5">
-                <a href="tel:0447418866" class="text-g-light text-sm font-medium tracking-wide hover:text-white" style="transition: color 0.3s ease;">
+                <a href="tel:0447418866" class="text-g-light text-sm font-medium tracking-wide hover:text-gray-900" style="transition: color 0.3s ease;">
                     0447 418 866
                 </a>
                 <a href="contact.html" class="btn-red text-sm">Book Now</a>
@@ -495,38 +495,38 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu hidden lg:hidden bg-d-900/98 backdrop-blur-lg border-t border-white/5">
+        <div id="mobileMenu" class="mobile-menu hidden lg:hidden bg-d-900/98 backdrop-blur-lg border-t border-black/5">
             <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-0">
 
-                <a href="#" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Home</a>
+                <a href="#" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Home</a>
 
                 <!-- Auto Detailing Accordion -->
-                <div class="border-b border-white/5">
-                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-white" style="transition: color 0.3s ease;" data-accordion="autoAccordion">
+                <div class="border-b border-black/5">
+                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-gray-900" style="transition: color 0.3s ease;" data-accordion="autoAccordion">
                         Auto Detailing
                         <svg class="mobile-accordion-chevron w-4 h-4 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div id="autoAccordion" class="mobile-accordion-content">
                         <div class="pb-3 pl-2 space-y-1">
-                            <a href="about-auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="about-auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>About Our Detailing</span>
                             </a>
-                            <a href="interior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="interior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Interior Detail</span><span class="text-r text-xs font-semibold">From $55</span>
                             </a>
-                            <a href="exterior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="exterior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Exterior Detail</span><span class="text-r text-xs font-semibold">From $55</span>
                             </a>
-                            <a href="maintenance-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="maintenance-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Maintenance Detail</span><span class="text-r text-xs font-semibold">From $85</span>
                             </a>
-                            <a href="full-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="full-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Full Detail</span><span class="text-r text-xs font-semibold">From $265</span>
                             </a>
-                            <a href="headlight-restoration.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="headlight-restoration.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Headlight Restoration</span><span class="text-r text-xs font-semibold">$100</span>
                             </a>
-                            <a href="auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-r font-semibold hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>View All Packages</span>
                             </a>
                         </div>
@@ -534,35 +534,35 @@
                 </div>
 
                 <!-- Yard Care Accordion -->
-                <div class="border-b border-white/5">
-                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-white" style="transition: color 0.3s ease;" data-accordion="lawnAccordion">
+                <div class="border-b border-black/5">
+                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-gray-900" style="transition: color 0.3s ease;" data-accordion="lawnAccordion">
                         Yard Care
                         <svg class="mobile-accordion-chevron w-4 h-4 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div id="lawnAccordion" class="mobile-accordion-content">
                         <div class="pb-3 pl-2 space-y-1">
-                            <a href="about-gardening.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">About Yard Care</a>
-                            <a href="lawn-mowing.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Lawn Mowing</a>
-                            <a href="edging-whipper-snipping.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Edging &amp; Whipper Snipping</a>
-                            <a href="hedge-trimming.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Hedge Trimming</a>
-                            <a href="weeding-garden-beds.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Weeding Garden Beds</a>
-                            <a href="green-waste-removal.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Green Waste Removal</a>
-                            <a href="general-yard-tidy.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">General Yard Tidy</a>
-                            <a href="clearing-leaves-debris.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Clearing Leaves &amp; Debris</a>
-                            <a href="gardening-yard-maintenance.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-r font-semibold hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">View All Services</a>
+                            <a href="about-gardening.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">About Yard Care</a>
+                            <a href="lawn-mowing.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Lawn Mowing</a>
+                            <a href="edging-whipper-snipping.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Edging &amp; Whipper Snipping</a>
+                            <a href="hedge-trimming.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Hedge Trimming</a>
+                            <a href="weeding-garden-beds.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Weeding Garden Beds</a>
+                            <a href="green-waste-removal.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Green Waste Removal</a>
+                            <a href="general-yard-tidy.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">General Yard Tidy</a>
+                            <a href="clearing-leaves-debris.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Clearing Leaves &amp; Debris</a>
+                            <a href="gardening-yard-maintenance.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">View All Services</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="gallery.html" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Gallery</a>
-                <a href="contact.html" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Contact</a>
+                <a href="gallery.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Gallery</a>
+                <a href="contact.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Contact</a>
 
                 <!-- Mobile CTA -->
                 <div class="pt-4 space-y-3">
                     <div class="flex items-center gap-3 text-g-light text-sm">
                         Open Weekends: Sat &amp; Sun 8am-5pm
                     </div>
-                    <a href="tel:0447418866" class="flex items-center gap-2 text-white text-base font-semibold">
+                    <a href="tel:0447418866" class="flex items-center gap-2 text-gray-900 text-base font-semibold">
                         0447 418 866
                     </a>
                     <a href="contact.html" class="btn-red text-center text-sm justify-center w-full">Book Now</a>
@@ -581,18 +581,18 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-24 pb-20">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 reveal">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-8 reveal">
                     <span class="text-g-light text-xs sm:text-sm font-medium tracking-wider uppercase">Melbourne's West - Open Weekends</span>
                 </div>
 
                 <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 reveal reveal-delay-1">
                     <span class="text-g">T</span><span class="text-r">JM</span><br>
-                    <span class="text-white">DETAILING</span>
+                    <span class="text-gray-900">DETAILING</span>
                 </h1>
 
                 <p class="text-lg sm:text-xl md:text-2xl text-g-light font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
-                    Professional <span class="text-white font-medium">Auto Detailing</span> &amp;
-                    <span class="text-white font-medium">Yard Maintenance</span>
+                    Professional <span class="text-gray-900 font-medium">Auto Detailing</span> &amp;
+                    <span class="text-gray-900 font-medium">Yard Maintenance</span>
                 </p>
                 <p class="text-g text-sm sm:text-base mb-10 reveal reveal-delay-2">
                     Rated 5.0 on Google &bull; Fully Insured &bull; Bookings Essential
@@ -613,36 +613,36 @@
 
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-50">
             <span class="text-xs tracking-widest uppercase text-g-light">Scroll</span>
-            <div class="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"></div>
+            <div class="w-px h-8 bg-gradient-to-b from-gray-400 to-transparent"></div>
         </div>
     </section>
 
 
     <!-- ============ TRUST BAR ============ -->
-    <section class="relative bg-d-800 border-y border-white/5">
+    <section class="relative bg-d-800 border-y border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 md:py-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div class="flex items-center gap-3 reveal">
                     <div>
-                        <p class="text-white font-semibold text-sm">Rated 5.0</p>
+                        <p class="text-gray-900 font-semibold text-sm">Rated 5.0</p>
                         <p class="text-g text-xs">on Google</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3 reveal reveal-delay-1">
                     <div>
-                        <p class="text-white font-semibold text-sm">Fully Insured</p>
+                        <p class="text-gray-900 font-semibold text-sm">Fully Insured</p>
                         <p class="text-g text-xs">Professional Service</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3 reveal reveal-delay-2">
                     <div>
-                        <p class="text-white font-semibold text-sm">Open Weekends</p>
+                        <p class="text-gray-900 font-semibold text-sm">Open Weekends</p>
                         <p class="text-g text-xs">Sat &amp; Sun, 8am-5pm</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3 reveal reveal-delay-3">
                     <div>
-                        <p class="text-white font-semibold text-sm">Melbourne's West</p>
+                        <p class="text-gray-900 font-semibold text-sm">Melbourne's West</p>
                         <p class="text-g text-xs">Mobile Service</p>
                     </div>
                 </div>
@@ -658,11 +658,11 @@
             <!-- AUTO DETAILING -->
             <a href="auto-detailing.html" class="branch-panel group relative flex items-end p-8 sm:p-12 min-h-[300px] md:min-h-full cursor-pointer" style="text-decoration:none; color:inherit;">
                 <img src="Assets/Auto Detailing/Exterior Detail.jpg" alt="Auto Detailing" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-d-950 via-d-950/70 to-d-950/30 z-[1]"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-d-950/30 z-[1]"></div>
                 <div class="absolute inset-0 bg-r/10 mix-blend-multiply z-[1]"></div>
                 <div class="relative z-10 w-full">
                     <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-3">AUTO<br>DETAILING</h2>
-                    <p class="text-g-light text-sm sm:text-base mb-5 max-w-sm">Vehicle detailing and maintenance - from quick cleans to full details. Interior, exterior, and everything in between.</p>
+                    <p class="text-gray-300 text-sm sm:text-base mb-5 max-w-sm">Vehicle detailing and maintenance - from quick cleans to full details. Interior, exterior, and everything in between.</p>
                     <span class="btn-red text-sm">
                         View Packages
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -677,10 +677,10 @@
                 <!-- Green color treatment -->
                 <div class="absolute inset-0 bg-[#1a3f20]/40" style="mix-blend-mode: multiply;"></div>
                 <!-- Bottom gradient for text readability -->
-                <div class="absolute inset-0 bg-gradient-to-t from-d-950 via-d-950/60 to-transparent z-[1]"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-[1]"></div>
                 <div class="relative z-10 w-full">
                     <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-3">GARDENING &amp;<br>YARD CARE</h2>
-                    <p class="text-g-light text-sm sm:text-base mb-5 max-w-sm">Professional lawn mowing, edging, hedge trimming, weeding, and general yard tidy-ups across Melbourne's West.</p>
+                    <p class="text-gray-300 text-sm sm:text-base mb-5 max-w-sm">Professional lawn mowing, edging, hedge trimming, weeding, and general yard tidy-ups across Melbourne's West.</p>
                     <span class="inline-flex items-center gap-2 bg-lawn text-white px-6 py-3 rounded font-semibold text-sm" style="transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;">
                         Explore Services
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -698,18 +698,18 @@
                 <div class="inline-flex items-center gap-2 bg-r/10 border border-r/20 rounded-full px-4 py-1.5 mb-5">
                     <span class="text-r text-xs font-semibold tracking-wider uppercase">Auto Detailing</span>
                 </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-4">DETAILING PACKAGES</h2>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">DETAILING PACKAGES</h2>
                 <p class="text-g text-base max-w-xl mx-auto">From a quick interior freshen-up to a complete full detail. Choose the package that suits your needs.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Interior Detail -->
-                <a href="interior-detail.html" class="service-card bg-d-800 border border-white/5 rounded-lg overflow-hidden reveal block">
+                <a href="interior-detail.html" class="service-card bg-d-800 border border-black/5 rounded-lg overflow-hidden reveal block">
                     <div class="h-1 bg-gradient-to-r from-r to-r-light"></div>
                     <div class="p-6 sm:p-7">
                         <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-display text-3xl font-bold text-white leading-none">INTERIOR<br>DETAIL</h3>
+                            <h3 class="font-display text-3xl font-bold text-gray-900 leading-none">INTERIOR<br>DETAIL</h3>
                             <span class="text-r font-display text-3xl font-bold">$55<span class="text-g text-lg">+</span></span>
                         </div>
                         <p class="text-g text-xs mb-5 flex items-center gap-1.5">
@@ -721,19 +721,19 @@
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Dashboard &amp; console wipe down</li>
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Windows cleaned (inside)</li>
                         </ul>
-                        <div class="border-t border-white/5 pt-4 flex justify-between text-xs text-g">
-                            <span>Hatch/Sedan: <span class="text-white font-semibold">$55</span></span>
-                            <span>SUV/4WD: <span class="text-white font-semibold">$65</span></span>
+                        <div class="border-t border-black/5 pt-4 flex justify-between text-xs text-g">
+                            <span>Hatch/Sedan: <span class="text-gray-900 font-semibold">$55</span></span>
+                            <span>SUV/4WD: <span class="text-gray-900 font-semibold">$65</span></span>
                         </div>
                     </div>
                 </a>
 
                 <!-- Exterior Detail -->
-                <a href="exterior-detail.html" class="service-card bg-d-800 border border-white/5 rounded-lg overflow-hidden reveal reveal-delay-1 block">
+                <a href="exterior-detail.html" class="service-card bg-d-800 border border-black/5 rounded-lg overflow-hidden reveal reveal-delay-1 block">
                     <div class="h-1 bg-gradient-to-r from-r to-r-light"></div>
                     <div class="p-6 sm:p-7">
                         <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-display text-3xl font-bold text-white leading-none">EXTERIOR<br>DETAIL</h3>
+                            <h3 class="font-display text-3xl font-bold text-gray-900 leading-none">EXTERIOR<br>DETAIL</h3>
                             <span class="text-r font-display text-3xl font-bold">$55<span class="text-g text-lg">+</span></span>
                         </div>
                         <p class="text-g text-xs mb-5 flex items-center gap-1.5">
@@ -745,19 +745,19 @@
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Wheel &amp; tyre dressing</li>
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Windows, door jambs &amp; drying</li>
                         </ul>
-                        <div class="border-t border-white/5 pt-4 flex justify-between text-xs text-g">
-                            <span>Hatch/Sedan: <span class="text-white font-semibold">$55</span></span>
-                            <span>SUV/4WD: <span class="text-white font-semibold">$65</span></span>
+                        <div class="border-t border-black/5 pt-4 flex justify-between text-xs text-g">
+                            <span>Hatch/Sedan: <span class="text-gray-900 font-semibold">$55</span></span>
+                            <span>SUV/4WD: <span class="text-gray-900 font-semibold">$65</span></span>
                         </div>
                     </div>
                 </a>
 
                 <!-- Maintenance Detail -->
-                <a href="maintenance-detail.html" class="service-card bg-d-800 border border-white/5 rounded-lg overflow-hidden reveal reveal-delay-2 block">
+                <a href="maintenance-detail.html" class="service-card bg-d-800 border border-black/5 rounded-lg overflow-hidden reveal reveal-delay-2 block">
                     <div class="h-1 bg-gradient-to-r from-r to-r-light"></div>
                     <div class="p-6 sm:p-7">
                         <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-display text-3xl font-bold text-white leading-none">MAINTENANCE<br>DETAIL</h3>
+                            <h3 class="font-display text-3xl font-bold text-gray-900 leading-none">MAINTENANCE<br>DETAIL</h3>
                             <span class="text-r font-display text-3xl font-bold">$85<span class="text-g text-lg">+</span></span>
                         </div>
                         <p class="text-g text-xs mb-5 flex items-center gap-1.5">
@@ -769,16 +769,16 @@
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Complete interior vacuum &amp; wipe</li>
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Wheels, tyres, windows &amp; jambs</li>
                         </ul>
-                        <div class="border-t border-white/5 pt-4 grid grid-cols-3 text-xs text-g text-center gap-2">
-                            <span>Sedan<br><span class="text-white font-semibold">$85</span></span>
-                            <span>SUV/4WD<br><span class="text-white font-semibold">$110</span></span>
-                            <span>Sm. Truck<br><span class="text-white font-semibold">$190</span></span>
+                        <div class="border-t border-black/5 pt-4 grid grid-cols-3 text-xs text-g text-center gap-2">
+                            <span>Sedan<br><span class="text-gray-900 font-semibold">$85</span></span>
+                            <span>SUV/4WD<br><span class="text-gray-900 font-semibold">$110</span></span>
+                            <span>Sm. Truck<br><span class="text-gray-900 font-semibold">$190</span></span>
                         </div>
                     </div>
                 </a>
 
                 <!-- Full Detail -->
-                <a href="full-detail.html" class="service-card bg-white border border-white/20 rounded-lg overflow-hidden relative reveal block">
+                <a href="full-detail.html" class="service-card bg-white border border-black/20 rounded-lg overflow-hidden relative reveal block">
                     <div class="h-1 bg-gradient-to-r from-r via-r-light to-r"></div>
                     <div class="p-6 sm:p-7">
                         <div class="flex items-start justify-between mb-1">
@@ -805,11 +805,11 @@
                 </a>
 
                 <!-- Headlight Restoration -->
-                <a href="headlight-restoration.html" class="service-card bg-d-800 border border-white/5 rounded-lg overflow-hidden reveal reveal-delay-1 block">
+                <a href="headlight-restoration.html" class="service-card bg-d-800 border border-black/5 rounded-lg overflow-hidden reveal reveal-delay-1 block">
                     <div class="h-1 bg-gradient-to-r from-r to-r-light"></div>
                     <div class="p-6 sm:p-7">
                         <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-display text-3xl font-bold text-white leading-none">HEADLIGHT<br>RESTORATION</h3>
+                            <h3 class="font-display text-3xl font-bold text-gray-900 leading-none">HEADLIGHT<br>RESTORATION</h3>
                             <span class="text-r font-display text-3xl font-bold">$100</span>
                         </div>
                         <p class="text-g text-xs mb-5 flex items-center gap-1.5">
@@ -821,17 +821,17 @@
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Restores clarity &amp; visibility</li>
                             <li class="flex items-start gap-2"><svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>6-12 months protection</li>
                         </ul>
-                        <div class="border-t border-white/5 pt-4 text-xs text-g">
-                            <span>All vehicle types: <span class="text-white font-semibold">$100</span></span>
+                        <div class="border-t border-black/5 pt-4 text-xs text-g">
+                            <span>All vehicle types: <span class="text-gray-900 font-semibold">$100</span></span>
                         </div>
                     </div>
                 </a>
 
                 <!-- CTA Card -->
                 <div class="service-card bg-gradient-to-br from-r-dark via-r to-r-light rounded-lg overflow-hidden flex flex-col items-center justify-center text-center p-6 sm:p-7 reveal reveal-delay-2">
-                    <svg class="w-12 h-12 text-white/80 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    <h3 class="font-display text-3xl font-bold text-white leading-none mb-2">READY TO BOOK?</h3>
-                    <p class="text-white/80 text-sm mb-5">Call now to secure your weekend appointment</p>
+                    <svg class="w-12 h-12 text-gray-900/80 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <h3 class="font-display text-3xl font-bold text-gray-900 leading-none mb-2">READY TO BOOK?</h3>
+                    <p class="text-gray-900/80 text-sm mb-5">Call now to secure your weekend appointment</p>
                     <a href="tel:0447418866" class="bg-white text-r font-bold px-6 py-3 rounded text-sm inline-flex items-center gap-2" style="transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
                         0447 418 866
                     </a>
@@ -850,49 +850,49 @@
                 <div class="inline-flex items-center gap-2 bg-lawn/10 border border-lawn/20 rounded-full px-4 py-1.5 mb-5">
                     <span class="text-lawn text-xs font-semibold tracking-wider uppercase">Gardening &amp; Yard Maintenance</span>
                 </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-4">YARD CARE SERVICES</h2>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">YARD CARE SERVICES</h2>
                 <p class="text-g text-base max-w-xl mx-auto">Keep your outdoor space looking its best. Professional gardening and yard maintenance across Melbourne's West.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                <a href="lawn-mowing.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">LAWN MOWING</h3>
+                <a href="lawn-mowing.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">LAWN MOWING</h3>
                     <p class="text-g text-sm">Professional mowing for a clean, even cut across your entire lawn.</p>
                 </a>
 
-                <a href="edging-whipper-snipping.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal reveal-delay-1 block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">EDGING &amp; WHIPPER SNIPPING</h3>
+                <a href="edging-whipper-snipping.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal reveal-delay-1 block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">EDGING &amp; WHIPPER SNIPPING</h3>
                     <p class="text-g text-sm">Crisp, defined edges along paths, driveways, and garden beds.</p>
                 </a>
 
-                <a href="hedge-trimming.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal reveal-delay-2 block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">HEDGE TRIMMING</h3>
+                <a href="hedge-trimming.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal reveal-delay-2 block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">HEDGE TRIMMING</h3>
                     <p class="text-g text-sm">Neat, shaped hedges that enhance your property's street appeal.</p>
                 </a>
 
-                <a href="weeding-garden-beds.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal reveal-delay-3 block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">WEEDING GARDEN BEDS</h3>
+                <a href="weeding-garden-beds.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal reveal-delay-3 block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">WEEDING GARDEN BEDS</h3>
                     <p class="text-g text-sm">Thorough hand weeding to keep your garden beds clean and healthy.</p>
                 </a>
 
-                <a href="green-waste-removal.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">GREEN WASTE REMOVAL</h3>
+                <a href="green-waste-removal.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">GREEN WASTE REMOVAL</h3>
                     <p class="text-g text-sm">All green waste removed and disposed of responsibly after every job.</p>
                 </a>
 
-                <a href="general-yard-tidy.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal reveal-delay-1 block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">GENERAL YARD TIDY</h3>
+                <a href="general-yard-tidy.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal reveal-delay-1 block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">GENERAL YARD TIDY</h3>
                     <p class="text-g text-sm">Complete yard clean-up to get your outdoor space looking presentable.</p>
                 </a>
 
-                <a href="clearing-leaves-debris.html" class="lawn-card bg-d-800 border border-white/5 rounded-lg p-6 reveal reveal-delay-2 block" style="text-decoration:none; color:inherit;">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">CLEARING LEAVES &amp; DEBRIS</h3>
+                <a href="clearing-leaves-debris.html" class="lawn-card bg-d-800 border border-black/5 rounded-lg p-6 reveal reveal-delay-2 block" style="text-decoration:none; color:inherit;">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">CLEARING LEAVES &amp; DEBRIS</h3>
                     <p class="text-g text-sm">Thorough clearing of leaves, twigs, and debris from all outdoor areas.</p>
                 </a>
 
                 <div class="lawn-card bg-gradient-to-br from-lawn-dark via-lawn to-lawn rounded-lg p-6 flex flex-col items-center justify-center text-center reveal reveal-delay-3">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">GET A QUOTE</h3>
-                    <p class="text-white/80 text-sm mb-4">Pricing varies by property size</p>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">GET A QUOTE</h3>
+                    <p class="text-gray-900/80 text-sm mb-4">Pricing varies by property size</p>
                     <a href="tel:0447418866" class="bg-white text-lawn-dark font-bold px-5 py-2.5 rounded text-sm inline-flex items-center gap-2" style="transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
                         Call Now
                     </a>
@@ -906,10 +906,10 @@
     <section id="gallery" class="relative py-20 md:py-28 bg-d-900">
         <div class="max-w-7xl mx-auto px-5 sm:px-8">
             <div class="text-center mb-14 reveal">
-                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-5">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-5">
                     <span class="text-g-light text-xs font-semibold tracking-wider uppercase">Our Work</span>
                 </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-4">RECENT RESULTS</h2>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">RECENT RESULTS</h2>
                 <p class="text-g text-base max-w-xl mx-auto">See the quality of our detailing work - real results from real Melbourne vehicles.</p>
             </div>
 
@@ -917,52 +917,52 @@
             <div class="gallery-grid grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal">
                     <img src="Assets/Auto Detailing/Exterior Detail.jpg" alt="Detailed vehicle exterior" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-1">
                     <img src="Assets/Auto Detailing/Interior Detail.jpg" alt="Detailed car interior" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-2">
                     <img src="Assets/Auto Detailing/Maintenance Detail 1.jpg" alt="Maintenance detail result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal">
                     <img src="Assets/Auto Detailing/Full detail.jpeg" alt="Porsche Cayenne detail" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-1">
                     <img src="Assets/Auto Detailing/Exterior Detail 2.jpg" alt="Exterior detail result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-2">
                     <img src="Assets/Auto Detailing/Interior Detail 2.jpg" alt="Interior detail result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal">
                     <img src="Assets/Auto Detailing/Interior Detail 3.jpg" alt="Interior detail closeup" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-1">
                     <img src="Assets/Auto Detailing/Full Detail2.jpg" alt="Full detail service result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal reveal-delay-2">
                     <img src="Assets/Auto Detailing/Full detail 3.jpg" alt="Full detail finished result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
                 <div class="img-zoom rounded-lg overflow-hidden relative reveal">
                     <img src="Assets/Auto Detailing/Maintenance detail 2.jpg" alt="Maintenance detail service result" class="w-full h-48 sm:h-56 md:h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
                 </div>
             </div>
@@ -996,37 +996,37 @@
                     <div class="inline-flex items-center gap-2 bg-r/10 border border-r/20 rounded-full px-4 py-1.5 mb-5">
                         <span class="text-r text-xs font-semibold tracking-wider uppercase">Operating Hours</span>
                     </div>
-                    <h2 class="font-display text-5xl sm:text-6xl font-bold text-white leading-none mb-6">WHEN WE'RE<br>AVAILABLE</h2>
-                    <p class="text-g text-base mb-8">We operate on <span class="text-white font-semibold">weekends only</span> to give you convenient Saturday and Sunday service.</p>
+                    <h2 class="font-display text-5xl sm:text-6xl font-bold text-gray-900 leading-none mb-6">WHEN WE'RE<br>AVAILABLE</h2>
+                    <p class="text-g text-base mb-8">We operate on <span class="text-gray-900 font-semibold">weekends only</span> to give you convenient Saturday and Sunday service.</p>
 
-                    <div class="bg-d-800 border border-white/5 rounded-lg overflow-hidden">
+                    <div class="bg-d-800 border border-black/5 rounded-lg overflow-hidden">
                         <div class="grid grid-cols-2 text-sm">
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g">Monday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g/50">Closed</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g">Tuesday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g/50">Closed</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g">Wednesday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g/50">Closed</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g">Thursday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g/50">Closed</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g">Friday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-g/50">Closed</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-white font-semibold bg-r/5">Saturday</div>
-                            <div class="px-5 py-3.5 border-b border-white/5 text-white font-semibold bg-r/5">8:00 AM - 5:00 PM</div>
-                            <div class="px-5 py-3.5 text-white font-semibold bg-r/5">Sunday</div>
-                            <div class="px-5 py-3.5 text-white font-semibold bg-r/5">8:00 AM - 5:00 PM</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g">Monday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g/50">Closed</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g">Tuesday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g/50">Closed</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g">Wednesday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g/50">Closed</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g">Thursday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g/50">Closed</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g">Friday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-g/50">Closed</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-gray-900 font-semibold bg-r/5">Saturday</div>
+                            <div class="px-5 py-3.5 border-b border-black/5 text-gray-900 font-semibold bg-r/5">8:00 AM - 5:00 PM</div>
+                            <div class="px-5 py-3.5 text-gray-900 font-semibold bg-r/5">Sunday</div>
+                            <div class="px-5 py-3.5 text-gray-900 font-semibold bg-r/5">8:00 AM - 5:00 PM</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- CTA Block -->
                 <div class="reveal reveal-delay-2">
-                    <div class="bg-d-800 border border-white/5 rounded-xl p-8 sm:p-10 text-center relative overflow-hidden">
+                    <div class="bg-d-800 border border-black/5 rounded-xl p-8 sm:p-10 text-center relative overflow-hidden">
                         <div class="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-10" style="background: radial-gradient(circle, #CC0000, transparent 60%);"></div>
 
                         <img src="Assets/TJM detailing logo FA.png" alt="TJM Detailing" class="h-16 mx-auto mb-6">
 
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-white leading-none mb-3">BOOK YOUR<br>APPOINTMENT</h3>
+                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none mb-3">BOOK YOUR<br>APPOINTMENT</h3>
                         <p class="text-g text-base mb-2">Auto Detailing &bull; Yard Maintenance</p>
                         <p class="text-g text-sm mb-8">Bookings are essential - call us to lock in your weekend spot.</p>
 
@@ -1035,7 +1035,7 @@
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                                 0447 418 866
                             </a>
-                            <a href="contact.html" class="btn-red text-sm px-5 py-3 justify-center w-full sm:w-auto" style="background: transparent; border: 1px solid rgba(204,0,0,0.6);">
+                            <a href="contact.html" class="btn-red text-sm px-5 py-3 justify-center w-full sm:w-auto" style="background: transparent; border: 1px solid rgba(204,0,0,0.6); color: #CC0000;">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                                 Fill Out a Form
                             </a>
@@ -1058,7 +1058,7 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="bg-black border-t border-white/5">
+    <footer class="bg-black border-t border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div class="sm:col-span-2 lg:col-span-1">
@@ -1116,7 +1116,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="border-t border-black/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="text-g/60 text-xs">&copy; 2026 TJM Detailing. All rights reserved.</p>
                 <div class="flex items-center gap-4">
                     <p class="text-g/40 text-xs">Bookings essential &bull; Prices may vary upon inspection</p>

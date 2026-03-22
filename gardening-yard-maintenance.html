@@ -12,10 +12,10 @@
         theme: {
             extend: {
                 colors: {
-                    d: { 950: '#08090e', 900: '#0f1117', 800: '#1b1f2b', 700: '#232837', 600: '#2e3345' },
+                    d: { 950: '#ffffff', 900: '#f7f7f8', 800: '#f0f0f0', 700: '#e8e8e8', 600: '#e0e0e0' },
                     r: { DEFAULT: '#CC0000', dark: '#990000', light: '#E61A1A' },
                     steel: { DEFAULT: '#4f6f87', dark: '#3d5a6e', light: '#6a8da6' },
-                    g: { DEFAULT: '#8e8e8e', light: '#c4c3c4' },
+                    g: { DEFAULT: '#666666', light: '#888888' },
                     lawn: { DEFAULT: '#3a7d44', dark: '#2a5e32', deep: '#1a3f20', light: '#4a9d56' },
                 },
                 fontFamily: {
@@ -33,7 +33,7 @@
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #08090e; color: #fff; }
+        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a1a1a; }
         h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Teko', sans-serif; letter-spacing: -0.02em; }
         p, li { line-height: 1.7; }
 
@@ -51,7 +51,7 @@
 
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #08090e; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
         ::-webkit-scrollbar-thumb { background: #3a7d44; border-radius: 3px; }
 
         /* Buttons */
@@ -94,8 +94,8 @@
         .btn-lawn:active { transform: translateY(0); }
 
         .btn-outline {
-            border: 1.5px solid rgba(255,255,255,0.25);
-            color: #fff;
+            border: 1.5px solid rgba(0,0,0,0.15);
+            color: #1a1a1a;
             padding: 0.75rem 2rem;
             font-weight: 500;
             border-radius: 4px;
@@ -106,8 +106,8 @@
         }
         .btn-outline:hover {
             transform: translateY(-2px);
-            border-color: rgba(255,255,255,0.5);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.04);
         }
         .btn-outline:focus-visible { outline: 2px solid #4f6f87; outline-offset: 3px; }
         .btn-outline:active { transform: translateY(0); }
@@ -186,7 +186,7 @@
             background: #CC0000;
             transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .nav-link:hover { color: #fff; }
+        .nav-link:hover { color: #CC0000; }
         .nav-link:hover::after { width: 100%; }
         .nav-link:focus-visible { outline: 2px solid #CC0000; outline-offset: 4px; border-radius: 2px; }
 
@@ -220,7 +220,7 @@
         }
         .value-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.12), 0 8px 20px -8px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.12), 0 8px 20px -8px rgba(0,0,0,0.08);
         }
 
         /* Service card hover */
@@ -229,7 +229,7 @@
         }
         .service-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.15), 0 8px 20px -8px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.15), 0 8px 20px -8px rgba(0,0,0,0.08);
             border-color: rgba(58, 125, 68, 0.2);
         }
 
@@ -293,7 +293,7 @@
 <body class="antialiased overflow-x-hidden">
 
     <!-- ============ NAVBAR ============ -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-white/5">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 md:h-[72px]">
             <a href="index.html" class="flex-shrink-0" aria-label="TJM Detailing Home">
                 <img src="Assets/TJM detailing logo FA.png" alt="TJM Detailing" class="h-10 md:h-12 w-auto">
@@ -312,7 +312,7 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 720px; left: 50%; transform: translateX(-50%) translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <!-- Red accent bar -->
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
                             <div class="p-6">
@@ -324,7 +324,7 @@
                                             <a href="interior-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Interior Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Interior Detail</span>
                                                         <span class="text-r text-xs font-bold">From $55</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Vacuum, wipe down, windows - 1 hr</p>
@@ -333,7 +333,7 @@
                                             <a href="exterior-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Exterior Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Exterior Detail</span>
                                                         <span class="text-r text-xs font-bold">From $55</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Hand wash, wheels, tyres, dry - 1 hr</p>
@@ -342,7 +342,7 @@
                                             <a href="maintenance-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Maintenance Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Maintenance Detail</span>
                                                         <span class="text-r text-xs font-bold">From $85</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Full interior + exterior - 1.5-2 hrs</p>
@@ -351,7 +351,7 @@
                                             <a href="full-detail.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Full Detail</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Full Detail</span>
                                                         <span class="text-r text-xs font-bold">From $265</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Steam clean, stain removal, UV protect - 2.5+ hrs</p>
@@ -360,7 +360,7 @@
                                             <a href="headlight-restoration.html" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
                                                 <div class="flex-1 min-w-0">
                                                     <div class="flex items-center justify-between">
-                                                        <span class="text-white text-sm font-semibold">Headlight Restoration</span>
+                                                        <span class="text-gray-900 text-sm font-semibold">Headlight Restoration</span>
                                                         <span class="text-r text-xs font-bold">$100</span>
                                                     </div>
                                                     <p class="text-g text-xs mt-0.5">Remove oxidation, restore clarity - 45 min</p>
@@ -370,24 +370,24 @@
                                     </div>
 
                                     <!-- Side Panel -->
-                                    <div class="w-56 flex-shrink-0 border-l border-white/5 pl-6">
+                                    <div class="w-56 flex-shrink-0 border-l border-black/5 pl-6">
                                         <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Quick Info</p>
                                         <div class="space-y-4">
                                             <div>
-                                                <p class="text-white text-xs font-semibold mb-1">Vehicle Pricing</p>
+                                                <p class="text-gray-900 text-xs font-semibold mb-1">Vehicle Pricing</p>
                                                 <div class="space-y-1 text-xs text-g">
                                                     <div class="flex justify-between"><span>Hatch / Sedan</span><span class="text-g-light">Base price</span></div>
                                                     <div class="flex justify-between"><span>SUV / 4WD</span><span class="text-g-light">+$10-20</span></div>
                                                     <div class="flex justify-between"><span>Small Truck</span><span class="text-g-light">From $190</span></div>
                                                 </div>
                                             </div>
-                                            <div class="border-t border-white/5 pt-3">
-                                                <a href="about-auto-detailing.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-white mb-3" style="transition: color 0.2s ease;">
+                                            <div class="border-t border-black/5 pt-3">
+                                                <a href="about-auto-detailing.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-gray-900 mb-3" style="transition: color 0.2s ease;">
                                                     About Our Detailing
                                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                                 </a>
                                             </div>
-                                            <div class="border-t border-white/5 pt-3">
+                                            <div class="border-t border-black/5 pt-3">
                                                 <p class="text-g text-[11px] italic leading-relaxed">Prices may vary upon inspection of the vehicle.</p>
                                             </div>
                                             <a href="auto-detailing.html" class="flex items-center gap-2 text-r text-xs font-semibold hover:text-r-light" style="transition: color 0.2s ease;">
@@ -409,7 +409,7 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 600px; left: 50%; transform: translateX(-50%) translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-lawn to-transparent"></div>
                             <div class="p-6">
                                 <div class="flex gap-6">
@@ -419,43 +419,43 @@
                                         <div class="grid grid-cols-2 gap-0.5">
                                             <a href="lawn-mowing.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Lawn Mowing</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Lawn Mowing</span>
                                                     <span class="text-g text-[11px]">Even, clean cut</span>
                                                 </div>
                                             </a>
                                             <a href="edging-whipper-snipping.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Edging &amp; Snipping</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Edging &amp; Snipping</span>
                                                     <span class="text-g text-[11px]">Crisp defined edges</span>
                                                 </div>
                                             </a>
                                             <a href="hedge-trimming.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Hedge Trimming</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Hedge Trimming</span>
                                                     <span class="text-g text-[11px]">Neat, shaped hedges</span>
                                                 </div>
                                             </a>
                                             <a href="weeding-garden-beds.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Weeding</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Weeding</span>
                                                     <span class="text-g text-[11px]">Garden bed care</span>
                                                 </div>
                                             </a>
                                             <a href="green-waste-removal.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Green Waste</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Green Waste</span>
                                                     <span class="text-g text-[11px]">Removal &amp; disposal</span>
                                                 </div>
                                             </a>
                                             <a href="general-yard-tidy.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">General Yard Tidy</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">General Yard Tidy</span>
                                                     <span class="text-g text-[11px]">Full clean-up</span>
                                                 </div>
                                             </a>
                                             <a href="clearing-leaves-debris.html" class="mega-service-item mega-service-item-lawn flex items-center gap-3 px-3 py-2.5 group col-span-2">
                                                 <div>
-                                                    <span class="text-white text-sm font-semibold block leading-tight">Clearing Leaves &amp; Debris</span>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Clearing Leaves &amp; Debris</span>
                                                     <span class="text-g text-[11px]">Thorough clearing of all outdoor areas</span>
                                                 </div>
                                             </a>
@@ -463,12 +463,12 @@
                                     </div>
 
                                     <!-- Side CTA -->
-                                    <div class="w-44 flex-shrink-0 border-l border-white/5 pl-6 flex flex-col justify-between">
+                                    <div class="w-44 flex-shrink-0 border-l border-black/5 pl-6 flex flex-col justify-between">
                                         <div>
                                             <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing</p>
                                             <p class="text-g text-xs leading-relaxed mb-4">Pricing varies by property size and scope of work. Call for a free quote.</p>
                                         </div>
-                                        <a href="about-gardening.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-white mb-3" style="transition: color 0.2s ease;">
+                                        <a href="about-gardening.html" class="flex items-center gap-2 text-g-light text-xs font-semibold hover:text-gray-900 mb-3" style="transition: color 0.2s ease;">
                                             About Yard Care
                                             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                         </a>
@@ -493,36 +493,36 @@
                         <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="mega-panel pt-4" style="width: 380px; right: 0; left: auto; transform: translateY(8px);">
-                        <div class="bg-d-900 border border-white/8 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
                             <div class="p-6">
                                 <div class="space-y-5">
                                     <a href="tel:0447418866" class="flex items-center gap-4 group">
                                         <div>
-                                            <p class="text-white text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
+                                            <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
                                             <p class="text-g text-xs">Call to book your appointment</p>
                                         </div>
                                     </a>
-                                    <div class="border-t border-white/5"></div>
+                                    <div class="border-t border-black/5"></div>
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Weekend Only</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Weekend Only</p>
                                             <p class="text-g text-xs">Sat &amp; Sun: 8:00 AM - 5:00 PM</p>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Melbourne's West</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Melbourne's West</p>
                                             <p class="text-g text-xs">Mobile service - we come to you</p>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <div>
-                                            <p class="text-white text-sm font-semibold">Fully Insured</p>
+                                            <p class="text-gray-900 text-sm font-semibold">Fully Insured</p>
                                             <p class="text-g text-xs">Professional, trustworthy service</p>
                                         </div>
                                     </div>
-                                    <div class="border-t border-white/5 pt-4">
+                                    <div class="border-t border-black/5 pt-4">
                                         <a href="contact.html" class="btn-red text-sm w-full justify-center">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             Book an Appointment
@@ -537,7 +537,7 @@
 
             <!-- Desktop CTA -->
             <div class="hidden lg:flex items-center gap-5">
-                <a href="tel:0447418866" class="text-g-light text-sm font-medium tracking-wide hover:text-white" style="transition: color 0.3s ease;">
+                <a href="tel:0447418866" class="text-g-light text-sm font-medium tracking-wide hover:text-gray-900" style="transition: color 0.3s ease;">
                     0447 418 866
                 </a>
                 <a href="contact.html" class="btn-red text-sm">Book Now</a>
@@ -552,38 +552,38 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu hidden lg:hidden bg-d-900/98 backdrop-blur-lg border-t border-white/5">
+        <div id="mobileMenu" class="mobile-menu hidden lg:hidden bg-d-900/98 backdrop-blur-lg border-t border-black/5">
             <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-0">
 
-                <a href="index.html" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Home</a>
+                <a href="index.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Home</a>
 
                 <!-- Auto Detailing Accordion -->
-                <div class="border-b border-white/5">
-                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-white" style="transition: color 0.3s ease;" data-accordion="autoAccordion">
+                <div class="border-b border-black/5">
+                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-gray-900" style="transition: color 0.3s ease;" data-accordion="autoAccordion">
                         Auto Detailing
                         <svg class="mobile-accordion-chevron w-4 h-4 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div id="autoAccordion" class="mobile-accordion-content">
                         <div class="pb-3 pl-2 space-y-1">
-                            <a href="about-auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="about-auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>About Our Detailing</span>
                             </a>
-                            <a href="interior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="interior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Interior Detail</span><span class="text-r text-xs font-semibold">From $55</span>
                             </a>
-                            <a href="exterior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="exterior-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Exterior Detail</span><span class="text-r text-xs font-semibold">From $55</span>
                             </a>
-                            <a href="maintenance-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="maintenance-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Maintenance Detail</span><span class="text-r text-xs font-semibold">From $85</span>
                             </a>
-                            <a href="full-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="full-detail.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Full Detail</span><span class="text-r text-xs font-semibold">From $265</span>
                             </a>
-                            <a href="headlight-restoration.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="headlight-restoration.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Headlight Restoration</span><span class="text-r text-xs font-semibold">$100</span>
                             </a>
-                            <a href="auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-r font-semibold hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                            <a href="auto-detailing.html" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>View All Packages</span>
                             </a>
                         </div>
@@ -591,35 +591,35 @@
                 </div>
 
                 <!-- Yard Care Accordion -->
-                <div class="border-b border-white/5">
-                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-white" style="transition: color 0.3s ease;" data-accordion="lawnAccordion">
+                <div class="border-b border-black/5">
+                    <button class="mobile-accordion-btn flex items-center justify-between w-full text-g-light text-base font-medium py-3 hover:text-gray-900" style="transition: color 0.3s ease;" data-accordion="lawnAccordion">
                         Yard Care
                         <svg class="mobile-accordion-chevron w-4 h-4 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div id="lawnAccordion" class="mobile-accordion-content">
                         <div class="pb-3 pl-2 space-y-1">
-                            <a href="about-gardening.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">About Yard Care</a>
-                            <a href="lawn-mowing.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Lawn Mowing</a>
-                            <a href="edging-whipper-snipping.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Edging &amp; Whipper Snipping</a>
-                            <a href="hedge-trimming.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Hedge Trimming</a>
-                            <a href="weeding-garden-beds.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Weeding Garden Beds</a>
-                            <a href="green-waste-removal.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Green Waste Removal</a>
-                            <a href="general-yard-tidy.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">General Yard Tidy</a>
-                            <a href="clearing-leaves-debris.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-g-light hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Clearing Leaves &amp; Debris</a>
-                            <a href="gardening-yard-maintenance.html" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-sm text-r font-semibold hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">View All Services</a>
+                            <a href="about-gardening.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">About Yard Care</a>
+                            <a href="lawn-mowing.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Lawn Mowing</a>
+                            <a href="edging-whipper-snipping.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Edging &amp; Whipper Snipping</a>
+                            <a href="hedge-trimming.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Hedge Trimming</a>
+                            <a href="weeding-garden-beds.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Weeding Garden Beds</a>
+                            <a href="green-waste-removal.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Green Waste Removal</a>
+                            <a href="general-yard-tidy.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">General Yard Tidy</a>
+                            <a href="clearing-leaves-debris.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">Clearing Leaves &amp; Debris</a>
+                            <a href="gardening-yard-maintenance.html" class="block py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">View All Services</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="gallery.html" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Gallery</a>
-                <a href="contact.html" class="text-g-light text-base font-medium py-3 border-b border-white/5 hover:text-white" style="transition: color 0.3s ease;" onclick="closeMenu()">Contact</a>
+                <a href="gallery.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Gallery</a>
+                <a href="contact.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Contact</a>
 
                 <!-- Mobile CTA -->
                 <div class="pt-4 space-y-3">
                     <div class="flex items-center gap-3 text-g-light text-sm">
                         Open Weekends: Sat &amp; Sun 8am-5pm
                     </div>
-                    <a href="tel:0447418866" class="flex items-center gap-2 text-white text-base font-semibold">
+                    <a href="tel:0447418866" class="flex items-center gap-2 text-gray-900 text-base font-semibold">
                         0447 418 866
                     </a>
                     <a href="contact.html" class="btn-red text-center text-sm justify-center w-full">Book Now</a>
@@ -633,28 +633,28 @@
     <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden grain">
         <div class="absolute inset-0 z-0">
             <img src="Assets/Gardening & Yard Care/Lawn Mowing.avif" alt="" class="w-full h-full object-cover object-center" aria-hidden="true">
-            <div class="absolute inset-0 bg-gradient-to-r from-d-950 via-d-950/90 to-d-950/50"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-d-950 via-d-950/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
             <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 30% 50%, rgba(58,125,68,0.08) 0%, transparent 70%);"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-16 md:pt-32 md:pb-20">
             <div class="max-w-3xl">
-                <a href="index.html" class="inline-flex items-center gap-2 text-g text-sm mb-6 hover:text-white reveal" style="transition: color 0.3s ease;">
+                <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white reveal" style="transition: color 0.3s ease;">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
                     Back to Home
                 </a>
 
 
-                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 reveal reveal-delay-1">
+                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 text-white reveal reveal-delay-1">
                     GARDENING &amp;<br>
                     <span class="text-lawn">YARD MAINTENANCE</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl md:text-2xl text-g-light font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
                     Your yard deserves the same care as your vehicle - <span class="text-white font-medium">professional results, every time</span>.
                 </p>
-                <p class="text-g text-sm sm:text-base mb-10 reveal reveal-delay-2">
+                <p class="text-gray-400 text-sm sm:text-base mb-10 reveal reveal-delay-2">
                     Rated 5.0 on Google &bull; Fully Insured &bull; Melbourne's West &bull; Weekends Only
                 </p>
 
@@ -684,12 +684,12 @@
                         <span class="text-lawn text-xs font-semibold tracking-[0.2em] uppercase">Our Story</span>
                     </div>
 
-                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-6">
+                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-6">
                         YOUR YARD,<br><span class="text-lawn">OUR PRIDE</span>
                     </h2>
 
                     <p class="text-g-light text-base sm:text-lg mb-5" style="line-height: 1.7;">
-                        TJM Detailing isn't just about vehicles - we bring the same <span class="text-white font-medium">hands-on care and attention to your outdoor spaces</span>. A tidy yard makes a real difference, and we take pride in making yours look its best.
+                        TJM Detailing isn't just about vehicles - we bring the same <span class="text-gray-900 font-medium">hands-on care and attention to your outdoor spaces</span>. A tidy yard makes a real difference, and we take pride in making yours look its best.
                     </p>
 
                     <p class="text-g text-base mb-5" style="line-height: 1.7;">
@@ -723,85 +723,85 @@
                 <div class="inline-flex items-center gap-2 bg-lawn/10 border border-lawn/20 rounded-full px-4 py-1.5 mb-5">
                     <span class="text-lawn text-xs font-semibold tracking-wider uppercase">What We Offer</span>
                 </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-4">OUR SERVICES</h2>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">OUR SERVICES</h2>
                 <p class="text-g text-base max-w-2xl mx-auto">From regular lawn mowing to full yard overhauls - we keep your outdoor spaces looking sharp. Pricing varies by property size and scope of work.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <!-- Service 1 -->
-                <a href="lawn-mowing.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal block">
+                <a href="lawn-mowing.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Lawn Mowing.avif" alt="Lawn mowing service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Lawn Mowing</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Lawn Mowing</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">A clean, even cut across your entire lawn. We leave your grass looking neat and well-maintained, with clippings collected or mulched to your preference.</p>
                     </div>
                 </a>
 
                 <!-- Service 2 -->
-                <a href="edging-whipper-snipping.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal reveal-delay-1 block">
+                <a href="edging-whipper-snipping.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-1 block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Edging.avif" alt="Edging and whipper snipping service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Edging &amp; Whipper Snipping</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Edging &amp; Whipper Snipping</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">Crisp, defined edges along driveways, paths, and garden beds. We detail those hard-to-reach spots that make the whole yard look polished.</p>
                     </div>
                 </a>
 
                 <!-- Service 3 -->
-                <a href="hedge-trimming.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal reveal-delay-2 block">
+                <a href="hedge-trimming.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-2 block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Hedge Trimming.avif" alt="Hedge trimming service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Hedge Trimming</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Hedge Trimming</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">Neat, shaped hedges that frame your property properly. We trim to your preferred shape and height, keeping everything looking tidy and well-kept.</p>
                     </div>
                 </a>
 
                 <!-- Service 4 -->
-                <a href="weeding-garden-beds.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal block">
+                <a href="weeding-garden-beds.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Weeding.avif" alt="Weeding garden beds service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Weeding Garden Beds</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Weeding Garden Beds</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">Thorough weeding of all garden beds. We remove weeds by the root so your garden stays cleaner for longer and your plants have room to thrive.</p>
                     </div>
                 </a>
 
                 <!-- Service 5 -->
-                <a href="green-waste-removal.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal reveal-delay-1 block">
+                <a href="green-waste-removal.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-1 block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Green Waste Removal.jpg" alt="Green waste removal service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Green Waste Removal</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Green Waste Removal</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">All green waste collected and removed from your property. No piles left behind - we take everything with us so your yard is clean when we leave.</p>
                     </div>
                 </a>
 
                 <!-- Service 6 -->
-                <a href="general-yard-tidy.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden reveal reveal-delay-2 block">
+                <a href="general-yard-tidy.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-2 block">
                     <div class="img-zoom relative h-48">
                         <img src="Assets/Gardening & Yard Care/Yard Tidy.avif" alt="General yard tidy service" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-d-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                     </div>
                     <div class="p-7">
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">General Yard Tidy</h3>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">General Yard Tidy</h3>
                         <p class="text-g text-sm" style="line-height: 1.7;">A complete tidy-up of your outdoor space. Clearing leaves, debris, and general mess - everything gets sorted so your property looks its best.</p>
                     </div>
                 </a>
@@ -809,15 +809,15 @@
 
             <!-- Clearing Leaves - Full Width -->
             <div class="mt-5 reveal">
-                <a href="clearing-leaves-debris.html" class="service-card bg-d-800 border border-white/5 rounded-xl overflow-hidden block">
+                <a href="clearing-leaves-debris.html" class="service-card bg-d-800 border border-black/5 rounded-xl overflow-hidden block">
                     <div class="grid sm:grid-cols-[250px_1fr] md:grid-cols-[300px_1fr]">
                         <div class="img-zoom relative h-48 sm:h-full">
                             <img src="Assets/Gardening & Yard Care/Debris.avif" alt="Clearing leaves and debris service" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-d-950/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/70 via-transparent to-transparent"></div>
                             <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
                         </div>
                         <div class="p-7 flex flex-col justify-center">
-                            <h3 class="font-display text-2xl font-bold text-white mb-2">Clearing Leaves &amp; Debris</h3>
+                            <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Clearing Leaves &amp; Debris</h3>
                             <p class="text-g text-sm" style="line-height: 1.7;">Thorough clearing of all outdoor areas - driveways, paths, gutters, and garden beds. We make sure every surface is free of fallen leaves, branches, and built-up debris.</p>
                         </div>
                     </div>
@@ -839,71 +839,71 @@
     <section class="relative py-20 md:py-28 bg-d-900 grain">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
             <div class="text-center mb-16 reveal">
-                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-5">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-5">
                     <span class="text-g-light text-xs font-semibold tracking-wider uppercase">Why TJM</span>
                 </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-4">WHY CHOOSE US</h2>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">WHY CHOOSE US</h2>
                 <p class="text-g text-base max-w-2xl mx-auto">The same professionalism and care we bring to detailing vehicles - applied to your outdoor spaces.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <!-- Card 1 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Attention to Detail</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Attention to Detail</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">We don't just mow and go. Every edge, garden bed, and corner gets the attention it deserves. We're not done until your yard looks its best.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Fully Insured</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Fully Insured</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">Your property is in safe hands. We carry full insurance on every job, giving you complete peace of mind while we work.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">We Come to You</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">We Come to You</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">Servicing properties across Melbourne's West. We arrive with all the equipment we need - you don't have to lift a finger.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.162 1.28-5.993L2.317 7.82l6.087-.567L11.42 1.8l3.016 5.453 6.087.567-4.999 4.519 1.28 5.993-5.384-3.162z"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Consistent Quality</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Consistent Quality</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">The same high standard, every single visit. We don't cut corners - your yard gets the same thorough care whether it's your first booking or your tenth.</p>
                 </div>
 
                 <!-- Card 5 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Weekend Convenience</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Weekend Convenience</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">We work Saturdays and Sundays, 8 AM to 5 PM - so your yard gets sorted on the weekend without disrupting your week.</p>
                 </div>
 
                 <!-- Card 6 -->
-                <div class="value-card bg-d-800 border border-white/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
+                <div class="value-card bg-d-800 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
                     <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #3a7d44, transparent 60%);"></div>
                     <div class="w-12 h-12 rounded-xl bg-lawn/10 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6 text-lawn" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Full Clean-Up Included</h3>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Full Clean-Up Included</h3>
                     <p class="text-g text-sm" style="line-height: 1.7;">We don't leave a mess. All clippings, trimmings, and green waste are collected and removed. Your yard is cleaner than when we arrived.</p>
                 </div>
             </div>
@@ -918,10 +918,10 @@
 
                 <!-- Left: Heading -->
                 <div class="reveal lg:sticky lg:top-28">
-                    <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-5">
+                    <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-5">
                         <span class="text-g-light text-xs font-semibold tracking-wider uppercase">How It Works</span>
                     </div>
-                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-none mb-6">
+                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-6">
                         OUR<br><span class="text-lawn">PROCESS</span>
                     </h2>
                     <p class="text-g text-base mb-8" style="line-height: 1.7;">
@@ -941,8 +941,8 @@
                             <div class="absolute left-0 top-0 w-12 h-12 rounded-xl bg-lawn/10 border border-lawn/20 flex items-center justify-center">
                                 <span class="font-display text-2xl font-bold text-lawn">01</span>
                             </div>
-                            <div class="bg-d-800 border border-white/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
-                                <h3 class="font-display text-2xl font-bold text-white mb-2">Call &amp; Quote</h3>
+                            <div class="bg-d-800 border border-black/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
+                                <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Call &amp; Quote</h3>
                                 <p class="text-g text-sm" style="line-height: 1.7;">Give us a call on <a href="tel:0447418866" class="text-lawn font-medium hover:text-lawn-light" style="transition: color 0.2s ease;">0447 418 866</a> to discuss what your yard needs. We'll talk through the scope of work and provide a quote based on your property size.</p>
                             </div>
                         </div>
@@ -952,8 +952,8 @@
                             <div class="absolute left-0 top-0 w-12 h-12 rounded-xl bg-lawn/10 border border-lawn/20 flex items-center justify-center">
                                 <span class="font-display text-2xl font-bold text-lawn">02</span>
                             </div>
-                            <div class="bg-d-800 border border-white/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
-                                <h3 class="font-display text-2xl font-bold text-white mb-2">We Arrive on the Day</h3>
+                            <div class="bg-d-800 border border-black/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
+                                <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">We Arrive on the Day</h3>
                                 <p class="text-g text-sm" style="line-height: 1.7;">On your booked weekend, we show up at your property with all the equipment and tools needed. No delays, no excuses - we're ready to get started.</p>
                             </div>
                         </div>
@@ -963,8 +963,8 @@
                             <div class="absolute left-0 top-0 w-12 h-12 rounded-xl bg-lawn/10 border border-lawn/20 flex items-center justify-center">
                                 <span class="font-display text-2xl font-bold text-lawn">03</span>
                             </div>
-                            <div class="bg-d-800 border border-white/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
-                                <h3 class="font-display text-2xl font-bold text-white mb-2">The Work Gets Done</h3>
+                            <div class="bg-d-800 border border-black/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
+                                <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">The Work Gets Done</h3>
                                 <p class="text-g text-sm" style="line-height: 1.7;">Whether it's a regular mow, hedge trim, full garden tidy, or all of the above - we work through your yard systematically until everything is sorted.</p>
                             </div>
                         </div>
@@ -974,8 +974,8 @@
                             <div class="absolute left-0 top-0 w-12 h-12 rounded-xl bg-lawn/10 border border-lawn/20 flex items-center justify-center">
                                 <span class="font-display text-2xl font-bold text-lawn">04</span>
                             </div>
-                            <div class="bg-d-800 border border-white/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
-                                <h3 class="font-display text-2xl font-bold text-white mb-2">Clean-Up &amp; Walk-Through</h3>
+                            <div class="bg-d-800 border border-black/5 rounded-xl p-6" style="box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);">
+                                <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Clean-Up &amp; Walk-Through</h3>
                                 <p class="text-g text-sm" style="line-height: 1.7;">All green waste is collected and removed. We do a final walk-through to make sure everything is up to standard and you're happy with the result before we leave.</p>
                             </div>
                         </div>
@@ -999,8 +999,8 @@
 
                 <!-- Form -->
                 <div class="lg:col-span-3 reveal">
-                    <div class="bg-d-800 border border-white/8 rounded-xl p-6 sm:p-8 md:p-10">
-                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-2">GET A FREE QUOTE</h2>
+                    <div class="bg-d-800 border border-black/8 rounded-xl p-6 sm:p-8 md:p-10">
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-2">GET A FREE QUOTE</h2>
                         <p class="text-g text-sm mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
                         <form id="contactForm" action="https://formspree.io/f/meernbpl" method="POST" class="space-y-5">
@@ -1065,7 +1065,7 @@
                             <div class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-lawn flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 <div>
-                                    <p class="text-white font-semibold text-sm">Message sent!</p>
+                                    <p class="text-gray-900 font-semibold text-sm">Message sent!</p>
                                     <p class="text-g text-xs mt-1">Thanks for reaching out. We'll get back to you as soon as possible.</p>
                                 </div>
                             </div>
@@ -1077,27 +1077,27 @@
                 <div class="lg:col-span-2 space-y-5 reveal reveal-delay-1">
 
                     <!-- Call CTA -->
-                    <div class="bg-d-800 border border-white/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
+                    <div class="bg-d-800 border border-black/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-lg bg-lawn/10 flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-lawn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             </div>
                             <div>
-                                <p class="text-white font-semibold">Call Us</p>
+                                <p class="text-gray-900 font-semibold">Call Us</p>
                                 <p class="text-g text-xs">Quickest way to book</p>
                             </div>
                         </div>
-                        <a href="tel:0447418866" class="text-2xl font-display font-bold text-white hover:text-lawn" style="transition: color 0.3s ease;">0447 418 866</a>
+                        <a href="tel:0447418866" class="text-2xl font-display font-bold text-gray-900 hover:text-lawn" style="transition: color 0.3s ease;">0447 418 866</a>
                     </div>
 
                     <!-- Hours -->
-                    <div class="bg-d-800 border border-white/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
+                    <div class="bg-d-800 border border-black/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-lg bg-lawn/10 flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-lawn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
-                                <p class="text-white font-semibold">Operating Hours</p>
+                                <p class="text-gray-900 font-semibold">Operating Hours</p>
                                 <p class="text-g text-xs">Weekend only service</p>
                             </div>
                         </div>
@@ -1107,44 +1107,44 @@
                                 <span class="text-g/60">Closed</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-white font-medium">Saturday</span>
-                                <span class="text-white font-medium">8:00 AM - 5:00 PM</span>
+                                <span class="text-gray-900 font-medium">Saturday</span>
+                                <span class="text-gray-900 font-medium">8:00 AM - 5:00 PM</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-white font-medium">Sunday</span>
-                                <span class="text-white font-medium">8:00 AM - 5:00 PM</span>
+                                <span class="text-gray-900 font-medium">Sunday</span>
+                                <span class="text-gray-900 font-medium">8:00 AM - 5:00 PM</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Location -->
-                    <div class="bg-d-800 border border-white/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
+                    <div class="bg-d-800 border border-black/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-lg bg-lawn/10 flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-lawn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             </div>
                             <div>
-                                <p class="text-white font-semibold">Service Area</p>
+                                <p class="text-gray-900 font-semibold">Service Area</p>
                                 <p class="text-g text-xs">Mobile service - we come to you</p>
                             </div>
                         </div>
-                        <p class="text-white font-display text-xl font-bold">Melbourne's West</p>
+                        <p class="text-gray-900 font-display text-xl font-bold">Melbourne's West</p>
                     </div>
 
                     <!-- Trust badges -->
-                    <div class="bg-d-800 border border-white/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
+                    <div class="bg-d-800 border border-black/8 rounded-xl p-6" style="transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;">
                         <div class="space-y-3">
                             <div class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-lawn flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <span class="text-white text-sm font-medium">100% 5-Star Reviews</span>
+                                <span class="text-gray-900 text-sm font-medium">100% 5-Star Reviews</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-lawn flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                <span class="text-white text-sm font-medium">Fully Insured</span>
+                                <span class="text-gray-900 text-sm font-medium">Fully Insured</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-lawn flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                <span class="text-white text-sm font-medium">Bookings Essential</span>
+                                <span class="text-gray-900 text-sm font-medium">Bookings Essential</span>
                             </div>
                         </div>
                     </div>
@@ -1163,7 +1163,7 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="bg-black border-t border-white/5">
+    <footer class="bg-black border-t border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div class="sm:col-span-2 lg:col-span-1">
@@ -1222,7 +1222,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="border-t border-black/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="text-g/60 text-xs">&copy; 2026 TJM Detailing. All rights reserved.</p>
                 <div class="flex items-center gap-4">
                     <p class="text-g/40 text-xs">Bookings essential &bull; Prices may vary upon inspection</p>
