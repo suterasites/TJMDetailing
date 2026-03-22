@@ -235,34 +235,34 @@
 
         /* Form styles */
         .form-input {
-            background: rgba(255,255,255,0.04);
-            border: 1.5px solid rgba(255,255,255,0.1);
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.12);
             border-radius: 6px;
             padding: 0.75rem 1rem;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 0.875rem;
             width: 100%;
             transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             outline: none;
         }
         .form-input:hover {
-            border-color: rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.06);
+            border-color: rgba(0,0,0,0.2);
+            background: #fff;
         }
         .form-input:focus {
             border-color: #3a7d44;
             box-shadow: 0 0 0 3px rgba(58, 125, 68, 0.15);
-            background: rgba(255,255,255,0.06);
+            background: #fff;
         }
         .form-input::placeholder {
             color: #8e8e8e;
         }
         .form-select {
-            background: rgba(255,255,255,0.04);
-            border: 1.5px solid rgba(255,255,255,0.1);
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.12);
             border-radius: 6px;
             padding: 0.75rem 2.5rem 0.75rem 1rem;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 0.875rem;
             width: 100%;
             transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -275,17 +275,17 @@
             background-size: 1rem;
         }
         .form-select:hover {
-            border-color: rgba(255,255,255,0.2);
-            background-color: rgba(255,255,255,0.06);
+            border-color: rgba(0,0,0,0.2);
+            background-color: #fff;
         }
         .form-select:focus {
             border-color: #3a7d44;
             box-shadow: 0 0 0 3px rgba(58, 125, 68, 0.15);
-            background-color: rgba(255,255,255,0.06);
+            background-color: #fff;
         }
         .form-select option {
-            background: #0f1117;
-            color: #fff;
+            background: #fff;
+            color: #1a1a1a;
         }
     </style>
 </head>
@@ -1016,7 +1016,6 @@
                                 <label for="branch" class="block text-xs font-semibold text-g-light uppercase tracking-wider mb-2">Service Type <span class="text-lawn">*</span></label>
                                 <select id="branch" name="branch" required class="form-select">
                                     <option value="" disabled>Select a service type</option>
-                                    <option value="auto">Auto Detailing</option>
                                     <option value="yard" selected>Garden Maintenance</option>
                                 </select>
                             </div>
@@ -1235,13 +1234,6 @@
     <script>
         // Service options by branch
         const services = {
-            auto: [
-                { value: 'interior', label: 'Interior Detail - From $70' },
-                { value: 'exterior', label: 'Exterior Detail - From $70' },
-                { value: 'maintenance', label: 'Maintenance Detail - From $130' },
-                { value: 'full', label: 'Full Detail - From $265' },
-                { value: 'headlight', label: 'Headlight Restoration - $100' },
-            ],
             yard: [
                 { value: 'mowing', label: 'Lawn Mowing' },
                 { value: 'edging', label: 'Edging & Whipper Snipping' },
