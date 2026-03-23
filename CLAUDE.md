@@ -7,6 +7,7 @@
 - **Service Area:** Melbourne's West
 - **Reputation:** 100% 5-Star Reviews
 - **Insurance:** Fully Insured
+- **NDIS:** Registered NDIS Provider (Garden Maintenance services only)
 - **Phone:** 0447 418 866
 - **Booking Policy:** Bookings Essential
 - **Logo:** `Assets/TJM detailing logo FA.png` (grey "T", red "JM", dark grey "DETAILING" - used for both branches)
@@ -16,7 +17,7 @@
 TJM Detailing has **two main service branches**:
 
 1. **Auto Detailing** - vehicle detailing and maintenance services
-2. **Gardening & Yard Maintenance** - lawn and garden care services
+2. **Gardening & Yard Maintenance** - lawn and garden care services (NDIS Provider)
 
 ---
 
@@ -124,6 +125,8 @@ TJM Detailing has **two main service branches**:
 
 ## Gardening & Yard Maintenance Services
 
+> **Note:** TJM Detailing is a registered NDIS provider for garden maintenance services. NDIS participants can access these services through their plan.
+
 - Lawn Mowing
 - Edging and Whipper Snipping
 - Hedge Trimming
@@ -141,6 +144,7 @@ TJM Detailing has **two main service branches**:
 - **Mobile/local service** - servicing Melbourne's West
 - **Tiered pricing** - options for every budget, from a quick interior clean to a full detail
 - **Vehicle-size pricing** - fair pricing based on hatch/sedan, SUV/4WD, or small truck
+- **NDIS Provider** - registered NDIS provider for garden maintenance services, enabling NDIS participants to access yard care through their plan
 
 ---
 
