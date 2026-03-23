@@ -505,9 +505,9 @@
 
             <!-- Mobile toggle -->
             <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false">
-                <span class="block w-6 h-0.5 bg-white origin-center" id="bar1" style="transition: transform 0.3s ease;"></span>
-                <span class="block w-6 h-0.5 bg-white" id="bar2" style="transition: opacity 0.3s ease;"></span>
-                <span class="block w-6 h-0.5 bg-white origin-center" id="bar3" style="transition: transform 0.3s ease;"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 origin-center" id="bar1" style="transition: transform 0.3s ease, background-color 0.3s ease;"></span>
+                <span class="block w-6 h-0.5 bg-gray-900" id="bar2" style="transition: opacity 0.3s ease, background-color 0.3s ease;"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 origin-center" id="bar3" style="transition: transform 0.3s ease, background-color 0.3s ease;"></span>
             </button>
         </div>
 
@@ -1479,8 +1479,14 @@
                     }
                     if (currentScroll > 50) {
                         navbar.style.backgroundColor = 'rgba(8,9,14,0.97)';
+                        bar1.style.backgroundColor = '#fff';
+                        bar2.style.backgroundColor = '#fff';
+                        bar3.style.backgroundColor = '#fff';
                     } else {
                         navbar.style.backgroundColor = '';
+                        bar1.style.backgroundColor = '';
+                        bar2.style.backgroundColor = '';
+                        bar3.style.backgroundColor = '';
                     }
                     lastScroll = currentScroll;
                     ticking = false;
