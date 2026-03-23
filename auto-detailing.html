@@ -54,6 +54,8 @@
         ::-webkit-scrollbar-track { background: #f5f5f5; }
         ::-webkit-scrollbar-thumb { background: #CC0000; border-radius: 3px; }
 
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+
         /* Buttons */
         .btn-red {
             background: #CC0000;
@@ -476,32 +478,6 @@
                                         </div>
                                     </a>
 
-                                    <div class="border-t border-black/5"></div>
-
-                                    <!-- Hours -->
-                                    <div class="flex items-center gap-4">
-                                        <div>
-                                            <p class="text-gray-900 text-sm font-semibold">Weekend Only</p>
-                                            <p class="text-g text-xs">Sat &amp; Sun: 8:00 AM - 5:00 PM</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Location -->
-                                    <div class="flex items-center gap-4">
-                                        <div>
-                                            <p class="text-gray-900 text-sm font-semibold">Melbourne's West</p>
-                                            <p class="text-g text-xs">Mobile service - we come to you</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Insurance -->
-                                    <div class="flex items-center gap-4">
-                                        <div>
-                                            <p class="text-gray-900 text-sm font-semibold">Fully Insured</p>
-                                            <p class="text-g text-xs">Professional, trustworthy service</p>
-                                        </div>
-                                    </div>
-
                                     <div class="border-t border-black/5 pt-4">
                                         <a href="contact.html" class="btn-red text-sm w-full justify-center">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -630,8 +606,8 @@
 
 
                 <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 text-white reveal reveal-delay-1">
-                    DETAILING<br>
-                    <span class="text-r">PACKAGES</span>
+                    AUTO<br>
+                    <span class="text-r">DETAILING</span>
                 </h1>
 
                 <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
@@ -803,363 +779,243 @@
     <!-- ============ PACKAGES ============ -->
     <section id="packages" class="relative py-20 md:py-28 bg-d-900 grain">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">CHOOSE YOUR PACKAGE</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Every vehicle is different. Pick the service level that matches your needs - from a quick interior freshen-up to a complete full detail with steam cleaning and UV protection.</p>
-            </div>
-
-
-            <!-- ---- Interior Detail ---- -->
-            <div class="grid md:grid-cols-2 gap-8 mb-16 items-center reveal" id="interior">
-                <div class="img-zoom rounded-xl overflow-hidden relative">
-                    <img src="Assets/Auto Detailing/Interior Detail.jpg" alt="Interior detail - vacuum, wipe down, clean windows" class="w-full h-72 md:h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 left-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~1 Hour</span>
-                    </div>
-                </div>
+            <div class="flex items-end justify-between mb-16 reveal">
                 <div>
-                    <div class="mb-4">
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none">INTERIOR DETAIL</h3>
-                    </div>
-                    <p class="text-g text-sm mb-6">A thorough clean of your vehicle's cabin - ideal as a regular refresh or when you want the inside looking its best.</p>
+                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">CHOOSE YOUR PACKAGE</h2>
+                    <p class="text-g text-base max-w-2xl">Every vehicle is different. Pick the service level that matches your needs - from a quick interior freshen-up to a complete full detail with steam cleaning and UV protection.</p>
+                </div>
+                <div class="hidden md:flex items-center gap-3 flex-shrink-0 ml-8">
+                    <button id="pkgPrev" aria-label="Previous package" class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-g hover:text-gray-900 hover:border-black/25 disabled:opacity-30 disabled:cursor-not-allowed" style="transition: border-color 0.2s ease, color 0.2s ease;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button id="pkgNext" aria-label="Next package" class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-g hover:text-gray-900 hover:border-black/25 disabled:opacity-30 disabled:cursor-not-allowed" style="transition: border-color 0.2s ease, color 0.2s ease;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
 
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Vacuum of seats, under seats, carpet, boot, floor mats &amp; compartments
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Wipe down of dashboard, centre console &amp; trims
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Windows cleaned (inside only)
-                        </li>
-                    </ul>
+            <!-- Carousel wrapper -->
+            <div class="relative">
+                <div id="pkgTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style="scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none;">
 
-                    <div class="bg-d-800 border border-black/5 rounded-lg p-5 mb-6">
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing by Vehicle Size</p>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">Hatch / Sedan</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$70</p>
+                    <!-- ---- Interior Detail ---- -->
+                    <div class="snap-start flex-shrink-0 w-[85%] sm:w-[70%] md:w-[calc(50%-12px)] bg-d-950 border border-black/5 rounded-xl overflow-hidden" id="interior">
+                        <div class="relative h-56 sm:h-64">
+                            <img src="Assets/Auto Detailing/Interior Detail.jpg" alt="Interior detail - vacuum, wipe down, clean windows" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~1 Hour</span>
                             </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">SUV / 4WD</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$80</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">7 Seater</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$90</p>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-none mb-3">INTERIOR DETAIL</h3>
+                            <p class="text-g text-sm mb-5">A thorough clean of your vehicle's cabin - ideal as a regular refresh or when you want the inside looking its best.</p>
+                            <ul class="space-y-2.5 mb-6">
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Vacuum of seats, carpet, boot &amp; floor mats
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Wipe down of dashboard, console &amp; trims
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Windows cleaned (inside only)
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="contact.html" class="btn-red text-sm">
+                                    Book Now
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </a>
+                                <a href="interior-detail.html" class="btn-outline text-sm">
+                                    Learn More
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="contact.html" class="btn-red text-sm">
-                            Book Interior Detail
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                        <a href="interior-detail.html" class="btn-outline text-sm">
-                            Learn More
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-black/5 mb-16"></div>
-
-            <!-- ---- Exterior Detail ---- -->
-            <div class="grid md:grid-cols-2 gap-8 mb-16 items-center reveal" id="exterior">
-                <div class="order-2 md:order-1">
-                    <div class="mb-4">
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none">EXTERIOR DETAIL</h3>
-                    </div>
-                    <p class="text-g text-sm mb-6">A complete exterior wash and finish that leaves your paintwork gleaming - hand washed with care using the two-bucket method.</p>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Pre wash
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Two bucket exterior hand wash
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Wheel &amp; tyre dressing
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Windows cleaned (exterior)
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Door jambs cleaned
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Drying of vehicle
-                        </li>
-                    </ul>
-
-                    <div class="bg-d-800 border border-black/5 rounded-lg p-5 mb-6">
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing by Vehicle Size</p>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">Hatch / Sedan</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$70</p>
+                    <!-- ---- Exterior Detail ---- -->
+                    <div class="snap-start flex-shrink-0 w-[85%] sm:w-[70%] md:w-[calc(50%-12px)] bg-d-950 border border-black/5 rounded-xl overflow-hidden" id="exterior">
+                        <div class="relative h-56 sm:h-64">
+                            <img src="Assets/Auto Detailing/Exterior Detail.jpg" alt="Exterior detail - hand wash, wheels, tyres" class="w-full h-full object-cover object-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~1 Hour</span>
                             </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">SUV / 4WD</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$80</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">7 Seater</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$90</p>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-none mb-3">EXTERIOR DETAIL</h3>
+                            <p class="text-g text-sm mb-5">A complete exterior wash and finish that leaves your paintwork gleaming - hand washed with care using the two-bucket method.</p>
+                            <ul class="space-y-2.5 mb-6">
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Pre wash &amp; two bucket hand wash
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Wheel &amp; tyre dressing
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Windows, door jambs &amp; drying
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="contact.html" class="btn-red text-sm">
+                                    Book Now
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </a>
+                                <a href="exterior-detail.html" class="btn-outline text-sm">
+                                    Learn More
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="contact.html" class="btn-red text-sm">
-                            Book Exterior Detail
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                        <a href="exterior-detail.html" class="btn-outline text-sm">
-                            Learn More
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2 img-zoom rounded-xl overflow-hidden relative">
-                    <img src="Assets/Auto Detailing/Exterior Detail.jpg" alt="Exterior detail - hand wash, wheels, tyres" class="w-full h-72 md:h-96 object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 right-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~1 Hour</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-black/5 mb-16"></div>
-
-            <!-- ---- Maintenance Detail ---- -->
-            <div class="grid md:grid-cols-2 gap-8 mb-16 items-center reveal" id="maintenance">
-                <div class="img-zoom rounded-xl overflow-hidden relative">
-                    <img src="Assets/Auto Detailing/Maintenance Detail 1.jpg" alt="Maintenance detail - full interior and exterior" class="w-full h-72 md:h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 left-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">1.5 - 2 Hours</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="mb-2">
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none">MAINTENANCE DETAIL</h3>
-                    </div>
-                    <p class="text-g text-xs mb-5 italic">Best value - interior + exterior in one session</p>
-                    <p class="text-g text-sm mb-6">Our most popular service. A complete interior and exterior clean in one visit - everything your vehicle needs to look sharp and well-maintained.</p>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Pre wash &amp; two bucket exterior hand wash
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Wheel &amp; tyre shine
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Windows cleaned, door jambs cleaned &amp; vehicle dried
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Vacuum of seats, under seats, carpet, floor mats &amp; compartments
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Dashboard, centre console &amp; trim wipe down
-                        </li>
-                    </ul>
-
-                    <div class="bg-d-800 border border-black/5 rounded-lg p-5 mb-6">
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing by Vehicle Size</p>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">Hatch / Sedan</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$130</p>
-                                <p class="text-g text-[11px]">1 hr 30 min</p>
+                    <!-- ---- Maintenance Detail ---- -->
+                    <div class="snap-start flex-shrink-0 w-[85%] sm:w-[70%] md:w-[calc(50%-12px)] bg-d-950 border border-black/5 rounded-xl overflow-hidden" id="maintenance">
+                        <div class="relative h-56 sm:h-64">
+                            <img src="Assets/Auto Detailing/Maintenance Detail 1.jpg" alt="Maintenance detail - full interior and exterior" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                            <div class="absolute bottom-4 left-4 z-10 flex gap-2">
+                                <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">1.5 - 2 Hours</span>
+                                <span class="bg-white/90 text-gray-900 text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">Best Value</span>
                             </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">SUV / 4WD</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$140</p>
-                                <p class="text-g text-[11px]">1 hr 45 min</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">7 Seater</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$150</p>
-                                <p class="text-g text-[11px]">2 hrs</p>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-none mb-3">MAINTENANCE DETAIL</h3>
+                            <p class="text-g text-sm mb-5">Our most popular service. A complete interior and exterior clean in one visit - everything your vehicle needs to look sharp.</p>
+                            <ul class="space-y-2.5 mb-6">
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Pre wash &amp; two bucket hand wash
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Wheel &amp; tyre shine, windows &amp; door jambs
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Full vacuum, dash &amp; console wipe down
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="contact.html" class="btn-red text-sm">
+                                    Book Now
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </a>
+                                <a href="maintenance-detail.html" class="btn-outline text-sm">
+                                    Learn More
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="contact.html" class="btn-red text-sm">
-                            Book Maintenance Detail
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                        <a href="maintenance-detail.html" class="btn-outline text-sm">
-                            Learn More
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-black/5 mb-16"></div>
-
-            <!-- ---- Full Detail ---- -->
-            <div class="grid md:grid-cols-2 gap-8 mb-16 items-center reveal" id="full">
-                <div class="order-2 md:order-1">
-                    <div class="mb-2">
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none">FULL DETAIL</h3>
-                    </div>
-                    <div class="inline-flex items-center bg-r text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded mb-5">
-                        Premium Package
-                    </div>
-                    <p class="text-g text-sm mb-6">The ultimate treatment for your vehicle. Everything in the Maintenance Detail, plus steam cleaning, stain removal, and UV protection for a showroom-level finish.</p>
-
-                    <ul class="space-y-3 mb-3">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Everything in the Maintenance Detail
-                        </li>
-                    </ul>
-                    <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-r mb-3 pl-8">Plus:</p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Steam clean of trim, dash, air vents, floor mats &amp; seats
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Stain removal (if necessary)
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            UV protectant applied to dash, console &amp; door trims
-                        </li>
-                    </ul>
-
-                    <div class="bg-d-800 border border-r/20 rounded-lg p-5 mb-6 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing by Vehicle Size</p>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">Hatch / Sedan</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$265</p>
-                                <p class="text-g text-[11px]">2 hrs 30 min</p>
+                    <!-- ---- Full Detail ---- -->
+                    <div class="snap-start flex-shrink-0 w-[85%] sm:w-[70%] md:w-[calc(50%-12px)] bg-d-950 border border-r/20 rounded-xl overflow-hidden relative" id="full">
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r z-10"></div>
+                        <div class="relative h-56 sm:h-64">
+                            <img src="Assets/Auto Detailing/Full detail.jpeg" alt="Full detail - steam clean, UV protection, stain removal" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                            <div class="absolute bottom-4 left-4 z-10 flex gap-2">
+                                <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">2.5 - 3 Hours</span>
+                                <span class="bg-r text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">Premium</span>
                             </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">SUV / 4WD</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$285</p>
-                                <p class="text-g text-[11px]">2 hrs 45 min</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-g text-xs mb-1">7 Seater</p>
-                                <p class="font-display text-3xl font-bold text-gray-900">$300</p>
-                                <p class="text-g text-[11px]">3 hrs</p>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-none mb-3">FULL DETAIL</h3>
+                            <p class="text-g text-sm mb-5">The ultimate treatment. Everything in the Maintenance Detail, plus steam cleaning, stain removal, and UV protection.</p>
+                            <ul class="space-y-2.5 mb-6">
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Everything in the Maintenance Detail
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Steam clean of trim, dash, vents &amp; seats
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Stain removal &amp; UV protectant
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="contact.html" class="btn-red text-sm">
+                                    Book Now
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </a>
+                                <a href="full-detail.html" class="btn-outline text-sm">
+                                    Learn More
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="contact.html" class="btn-red text-sm">
-                            Book Full Detail
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                        <a href="full-detail.html" class="btn-outline text-sm">
-                            Learn More
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2 img-zoom rounded-xl overflow-hidden relative">
-                    <img src="Assets/Auto Detailing/Full detail.jpeg" alt="Full detail - steam clean, UV protection, stain removal" class="w-full h-72 md:h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 right-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">2.5 - 2.75 Hours</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-black/5 mb-16"></div>
-
-            <!-- ---- Headlight Restoration ---- -->
-            <div class="grid md:grid-cols-2 gap-8 items-center reveal" id="headlights">
-                <div class="img-zoom rounded-xl overflow-hidden relative">
-                    <img src="Assets/Auto Detailing/Exterior Detail.jpg" alt="Headlight restoration - remove oxidation, restore clarity" class="w-full h-72 md:h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 left-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~45 Minutes</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="mb-4">
-                        <h3 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 leading-none">HEADLIGHT RESTORATION</h3>
-                    </div>
-                    <p class="text-g text-sm mb-6">Restore cloudy, yellowed headlights back to crystal-clear condition. Improves both the look of your vehicle and your night-time visibility.</p>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Removes oxidation and cloudiness
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Restores clarity &amp; improves night visibility
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Keeps headlights cleaner for longer
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-g-light">
-                            <svg class="feature-check w-5 h-5 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Up to 6-12 months protection with proper care
-                        </li>
-                    </ul>
-
-                    <div class="bg-d-800 border border-black/5 rounded-lg p-5 mb-6">
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-3">Pricing</p>
-                        <div class="text-center">
-                            <p class="text-g text-xs mb-1">All Vehicle Types</p>
-                            <p class="font-display text-4xl font-bold text-gray-900">$100</p>
+                    <!-- ---- Headlight Restoration ---- -->
+                    <div class="snap-start flex-shrink-0 w-[85%] sm:w-[70%] md:w-[calc(50%-12px)] bg-d-950 border border-black/5 rounded-xl overflow-hidden" id="headlights">
+                        <div class="relative h-56 sm:h-64">
+                            <img src="Assets/Auto Detailing/Headlight Restoration.jpeg" alt="Headlight restoration - remove oxidation, restore clarity" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">~45 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-none mb-3">HEADLIGHT RESTORATION</h3>
+                            <p class="text-g text-sm mb-5">Restore cloudy, yellowed headlights back to crystal-clear condition. Improves both appearance and night-time visibility.</p>
+                            <ul class="space-y-2.5 mb-6">
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Removes oxidation and cloudiness
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    Restores clarity &amp; night visibility
+                                </li>
+                                <li class="flex items-start gap-2.5 text-sm text-g-light">
+                                    <svg class="w-4 h-4 text-r mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                    6-12 months protection with proper care
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="contact.html" class="btn-red text-sm">
+                                    Book Now
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </a>
+                                <a href="headlight-restoration.html" class="btn-outline text-sm">
+                                    Learn More
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="contact.html" class="btn-red text-sm">
-                            Book Headlight Restoration
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                        <a href="headlight-restoration.html" class="btn-outline text-sm">
-                            Learn More
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
+                </div>
+
+                <!-- Mobile arrow buttons -->
+                <div class="flex md:hidden items-center justify-center gap-3 mt-6">
+                    <button id="pkgPrevMobile" aria-label="Previous package" class="w-11 h-11 rounded-full border border-black/10 flex items-center justify-center text-g hover:text-gray-900 hover:border-black/25 disabled:opacity-30 disabled:cursor-not-allowed" style="transition: border-color 0.2s ease, color 0.2s ease;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div id="pkgDots" class="flex gap-2"></div>
+                    <button id="pkgNextMobile" aria-label="Next package" class="w-11 h-11 rounded-full border border-black/10 flex items-center justify-center text-g hover:text-gray-900 hover:border-black/25 disabled:opacity-30 disabled:cursor-not-allowed" style="transition: border-color 0.2s ease, color 0.2s ease;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
 
-            <p class="text-center text-g text-xs mt-16 reveal">* Prices may vary upon inspection of the vehicle.</p>
+            <p class="text-center text-g text-xs mt-12 reveal">* Prices may vary upon inspection of the vehicle.</p>
         </div>
     </section>
 
@@ -1639,6 +1495,71 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Package Carousel
+        (function() {
+            const track = document.getElementById('pkgTrack');
+            if (!track) return;
+            const cards = track.querySelectorAll('.snap-start');
+            const prevBtn = document.getElementById('pkgPrev');
+            const nextBtn = document.getElementById('pkgNext');
+            const prevMobile = document.getElementById('pkgPrevMobile');
+            const nextMobile = document.getElementById('pkgNextMobile');
+            const dotsWrap = document.getElementById('pkgDots');
+            let current = 0;
+
+            // Build dots
+            cards.forEach(function(_, i) {
+                const dot = document.createElement('span');
+                dot.className = 'w-2 h-2 rounded-full bg-black/15';
+                dot.style.transition = 'background 0.2s ease';
+                dotsWrap.appendChild(dot);
+            });
+            const dots = dotsWrap.querySelectorAll('span');
+
+            function updateUI() {
+                dots.forEach(function(d, i) {
+                    d.style.background = i === current ? '#CC0000' : 'rgba(0,0,0,0.15)';
+                });
+                if (prevBtn) prevBtn.disabled = current === 0;
+                if (nextBtn) nextBtn.disabled = current >= cards.length - 1;
+                if (prevMobile) prevMobile.disabled = current === 0;
+                if (nextMobile) nextMobile.disabled = current >= cards.length - 1;
+            }
+
+            function scrollTo(idx) {
+                current = Math.max(0, Math.min(idx, cards.length - 1));
+                cards[current].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                updateUI();
+            }
+
+            function onPrev() { scrollTo(current - 1); }
+            function onNext() { scrollTo(current + 1); }
+
+            if (prevBtn) prevBtn.addEventListener('click', onPrev);
+            if (nextBtn) nextBtn.addEventListener('click', onNext);
+            if (prevMobile) prevMobile.addEventListener('click', onPrev);
+            if (nextMobile) nextMobile.addEventListener('click', onNext);
+
+            // Sync current index on manual scroll
+            var scrollTimer;
+            track.addEventListener('scroll', function() {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(function() {
+                    var trackLeft = track.scrollLeft;
+                    var closest = 0;
+                    var minDist = Infinity;
+                    cards.forEach(function(card, i) {
+                        var dist = Math.abs(card.offsetLeft - track.offsetLeft - trackLeft);
+                        if (dist < minDist) { minDist = dist; closest = i; }
+                    });
+                    current = closest;
+                    updateUI();
+                }, 80);
+            });
+
+            updateUI();
+        })();
     </script>
 
 </body>
