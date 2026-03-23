@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Detail - TJM Detailing | Melbourne's West</title>
-    <meta name="description" content="Premium full detail from $265. Everything in the Maintenance Detail plus steam cleaning, stain removal & UV protection. Hatch/Sedan & SUV/4WD pricing. Rated 5.0 on Google. Call 0447 418 866.">
+    <title>About Us - TJM Detailing | Melbourne's West</title>
+    <meta name="description" content="Learn about TJM Detailing - professional auto detailing and garden maintenance in Melbourne's West. Built on reliability, craftsmanship, and genuine care.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -190,33 +190,24 @@
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
 
-        /* Card hover */
-        .service-card {
+        /* Branch card */
+        .branch-card {
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
         }
-        .service-card:hover {
+        .branch-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 50px -12px rgba(204, 0, 0, 0.12), 0 8px 20px -8px rgba(0,0,0,0.08);
+        }
+        .branch-card-auto:hover {
+            box-shadow: 0 20px 50px -12px rgba(204, 0, 0, 0.15), 0 8px 20px -8px rgba(0,0,0,0.08);
+        }
+        .branch-card-garden:hover {
+            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.15), 0 8px 20px -8px rgba(0,0,0,0.08);
         }
 
         /* Image zoom */
         .img-zoom { overflow: hidden; }
         .img-zoom img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
         .img-zoom:hover img { transform: scale(1.06); }
-
-        /* Feature list check animation */
-        .feature-check {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        /* Process step */
-        .process-step {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-        }
-        .process-step:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px -10px rgba(204, 0, 0, 0.1), 0 6px 16px -6px rgba(0,0,0,0.06);
-        }
     </style>
 </head>
 
@@ -396,7 +387,6 @@
                             <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
                             <div class="p-6">
                                 <div class="space-y-5">
-                                    <!-- Phone -->
                                     <a href="tel:0447418866" class="flex items-center gap-4 group">
                                         <div>
                                             <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
@@ -525,359 +515,219 @@
 
 
     <!-- ============ HERO ============ -->
-    <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden grain">
-        <div class="absolute inset-0 z-0">
-            <img src="Assets/Auto Detailing/Full detail.jpeg" alt="" class="w-full h-full object-cover object-center" aria-hidden="true">
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/50"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 30% 50%, rgba(204,0,0,0.08) 0%, transparent 70%);"></div>
+    <section class="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden grain">
+        <div class="absolute inset-0 z-0 bg-d-950">
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(204,0,0,0.08) 0%, transparent 70%);"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse 40% 50% at 20% 60%, rgba(58,125,68,0.06) 0%, transparent 70%);"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-16 md:pt-32 md:pb-20">
-            <div class="max-w-3xl">
-                <a href="auto-detailing.html" class="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white reveal" style="transition: color 0.3s ease;">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-                    All Detailing Packages
-                </a>
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-8 reveal">
+                    <span class="text-g-light text-xs sm:text-sm font-medium tracking-wider uppercase">Melbourne's West</span>
+                </div>
 
-
-                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 text-white reveal reveal-delay-1">
-                    FULL<br>
-                    <span class="text-r">DETAIL</span>
+                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 reveal reveal-delay-1">
+                    <span class="text-gray-900">ABOUT</span><br>
+                    <span class="text-g">T</span><span class="text-r">JM</span> <span class="text-gray-900">DETAILING</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
-                    The ultimate treatment - steam cleaning, stain removal, and UV protection for a <span class="text-white font-medium">showroom-level finish</span>.
+                <p class="text-lg sm:text-xl md:text-2xl text-g-light font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
+                    Professional <span class="text-gray-900 font-medium">Auto Detailing</span> &amp;
+                    <span class="text-gray-900 font-medium">Garden Maintenance</span>
                 </p>
-                <p class="text-gray-400 text-sm sm:text-base mb-10 reveal reveal-delay-2">
-                    From $265 &bull; 2.5-2.75 Hours &bull; Rated 5.0 on Google &bull; Fully Insured
+                <p class="text-g text-sm sm:text-base mb-10 reveal reveal-delay-2">
+                    Rated 5.0 on Google &bull; Fully Insured &bull; Bookings Essential
                 </p>
 
-                <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+                <div class="flex flex-wrap gap-4 justify-center reveal reveal-delay-3">
                     <a href="contact.html" class="btn-red text-base">
-                        Book Full Detail
+                        Get in Touch
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="tel:0447418866" class="btn-outline text-base">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    </a>
-                    <a href="#pricing" class="btn-outline text-base">
-                        View Pricing
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============ TRUST BAR ============ -->
-    <section class="relative bg-d-800 border-y border-black/5">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 md:py-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                <div class="flex items-center gap-3 reveal">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Rated 5.0</p>
-                        <p class="text-g text-xs">on Google</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-1">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Fully Insured</p>
-                        <p class="text-g text-xs">Professional Service</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-2">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Open Weekends</p>
-                        <p class="text-g text-xs">Sat &amp; Sun, 8am-5pm</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-3">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Melbourne's West</p>
-                        <p class="text-g text-xs">Mobile Service</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============ WHAT'S INCLUDED ============ -->
-    <section class="relative py-20 md:py-28 bg-d-950 grain">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">WHAT'S INCLUDED</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Everything in the Maintenance Detail, plus premium extras that take your vehicle to showroom level.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Image -->
-                <div class="img-zoom rounded-xl overflow-hidden relative reveal">
-                    <img src="Assets/Auto Detailing/Full detail.jpeg" alt="Full detail - steam clean, UV protection, stain removal" class="w-full h-80 md:h-[480px] object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 left-5 z-10">
-                        <span class="bg-r/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">2.5 - 2.75 Hour Service</span>
-                    </div>
-                </div>
-
-                <!-- Features -->
-                <div class="reveal reveal-delay-1">
-                    <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-4">Everything in the Maintenance Detail</p>
-                    <div class="bg-d-900 border border-black/5 rounded-xl p-4 mb-4">
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2.5 text-sm text-g-light">
-                                <svg class="feature-check w-4 h-4 text-g mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                Pre wash &amp; two-bucket exterior hand wash
-                            </li>
-                            <li class="flex items-start gap-2.5 text-sm text-g-light">
-                                <svg class="feature-check w-4 h-4 text-g mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                Wheel &amp; tyre shine, windows, door jambs &amp; dry
-                            </li>
-                            <li class="flex items-start gap-2.5 text-sm text-g-light">
-                                <svg class="feature-check w-4 h-4 text-g mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                Full interior vacuum &amp; dashboard wipe down
-                            </li>
-                        </ul>
-                    </div>
-
-                    <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-r mb-4">Plus Premium Extras</p>
-                    <div class="space-y-5">
-                        <!-- Feature 1 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-r/20 process-step relative overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                            <div class="w-11 h-11 rounded-lg bg-r/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-r" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">Steam Clean</h3>
-                                <p class="text-g text-sm">Deep steam clean of trim, dashboard, air vents, floor mats and seats for a thorough sanitised finish.</p>
-                            </div>
-                        </div>
-
-                        <!-- Feature 2 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-r/20 process-step relative overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                            <div class="w-11 h-11 rounded-lg bg-r/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-r" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">Stain Removal</h3>
-                                <p class="text-g text-sm">Targeted stain removal treatment where necessary to restore your upholstery and surfaces.</p>
-                            </div>
-                        </div>
-
-                        <!-- Feature 3 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-r/20 process-step relative overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                            <div class="w-11 h-11 rounded-lg bg-r/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-r" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">UV Protectant</h3>
-                                <p class="text-g text-sm">UV protectant applied to dashboard, centre console and door trims to prevent fading and cracking.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============ PRICING ============ -->
-    <section id="pricing" class="relative py-20 md:py-28 bg-d-900 grain">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">PRICING</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Fair pricing based on your vehicle size. No hidden fees, no surprises.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Hatch/Sedan -->
-                <div class="service-card bg-d-800 border border-r/20 rounded-xl overflow-hidden reveal relative">
-                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                    <div class="p-8 text-center">
-                        <div class="inline-flex items-center bg-r text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded mb-4">Premium</div>
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-2">Hatch / Sedan</p>
-                        <p class="font-display text-6xl font-bold text-gray-900 mb-1">$265</p>
-                        <p class="text-g text-sm mb-6">2 hrs 30 min</p>
-
-                        <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Full maintenance detail
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Steam clean (trim, dash, vents, seats)
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Stain removal
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                UV protectant applied
-                            </li>
-                        </ul>
-
-                        <a href="contact.html" class="btn-red text-sm w-full justify-center">
-                            Book Now
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- SUV/4WD -->
-                <div class="service-card bg-d-800 border border-r/20 rounded-xl overflow-hidden reveal reveal-delay-1 relative">
-                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                    <div class="p-8 text-center">
-                        <div class="inline-flex items-center bg-r text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded mb-4">Premium</div>
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-2">SUV / 4WD</p>
-                        <p class="font-display text-6xl font-bold text-gray-900 mb-1">$285</p>
-                        <p class="text-g text-sm mb-6">2 hrs 45 min</p>
-
-                        <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Full maintenance detail
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Steam clean (trim, dash, vents, seats)
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Stain removal
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                UV protectant applied
-                            </li>
-                        </ul>
-
-                        <a href="contact.html" class="btn-red text-sm w-full justify-center">
-                            Book Now
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 7 Seater -->
-                <div class="service-card bg-d-800 border border-r/20 rounded-xl overflow-hidden reveal reveal-delay-2 relative">
-                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-r via-r-light to-r"></div>
-                    <div class="p-8 text-center">
-                        <div class="inline-flex items-center bg-r text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded mb-4">Premium</div>
-                        <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-g mb-2">7 Seater</p>
-                        <p class="font-display text-6xl font-bold text-gray-900 mb-1">$300</p>
-                        <p class="text-g text-sm mb-6">2 hrs 45 min</p>
-
-                        <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Full maintenance detail
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Steam clean (trim, dash, vents, seats)
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                Stain removal
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-g-light">
-
-                                UV protectant applied
-                            </li>
-                        </ul>
-
-                        <a href="contact.html" class="btn-red text-sm w-full justify-center">
-                            Book Now
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center text-g text-xs italic mt-8 reveal">Prices may vary upon inspection of the vehicle.</p>
-        </div>
-    </section>
-
-
-    <!-- ============ UPGRADE CTA ============ -->
-    <section class="relative py-20 md:py-28 bg-d-950 grain">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-12 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">NEED MORE?</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Looking for a more complete clean? Check out our other detailing packages.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <!-- Interior -->
-                <a href="interior-detail.html" class="service-card bg-d-900 border border-black/5 rounded-xl p-6 text-center group reveal">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">INTERIOR DETAIL</h3>
-                    <p class="text-r text-sm font-bold mb-2">From $70</p>
-                    <p class="text-g text-xs">Vacuum, wipe down, windows - 1 hr</p>
-                </a>
-
-                <!-- Exterior -->
-                <a href="exterior-detail.html" class="service-card bg-d-900 border border-black/5 rounded-xl p-6 text-center group reveal reveal-delay-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">EXTERIOR DETAIL</h3>
-                    <p class="text-r text-sm font-bold mb-2">From $70</p>
-                    <p class="text-g text-xs">Hand wash, wheels, tyres - 1 hr</p>
-                </a>
-
-                <!-- Maintenance -->
-                <a href="maintenance-detail.html" class="service-card bg-d-900 border border-black/5 rounded-xl p-6 text-center group reveal reveal-delay-2">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">MAINTENANCE</h3>
-                    <p class="text-r text-sm font-bold mb-2">From $130</p>
-                    <p class="text-g text-xs">Interior + exterior - 1.5-2 hrs</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============ BOOK CTA ============ -->
-    <section class="relative py-20 md:py-28 bg-d-900 border-t border-black/5 grain">
-        <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(204,0,0,0.06) 0%, transparent 70%);"></div>
-        <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center relative z-10">
-            <div class="reveal">
-                <div class="w-16 h-16 rounded-xl bg-r/10 flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-8 h-8 text-r" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">READY TO BOOK?</h2>
-                <p class="text-g text-base mb-3">Book online or give us a call. We're available Saturday &amp; Sunday, 8am - 5pm.</p>
-                <p class="text-g-light text-sm mb-10">Bookings essential &bull; Melbourne's West &bull; Mobile service</p>
-
-                <!-- Square Appointments Embed -->
-                <div class="mb-6">
-                    <script src='https://square.site/appointments/buyer/widget/61gqygxiv3y3g9/L18SP4C9CFXNX.js'></script>
-                </div>
-
-                <p class="text-g text-sm mb-4">Or call us directly:</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:0447418866" class="btn-red text-lg px-8 py-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         0447 418 866
                     </a>
-                    <a href="auto-detailing.html" class="btn-outline text-base">
-                        View All Packages
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Elfsight Google Reviews | TJM Detailing -->
-    <section class="bg-black py-16">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-25d79ac5-9b3c-45de-8a27-148e40f124e1" data-elfsight-app-lazy></div>
+    <!-- ============ INTRO ============ -->
+    <section class="relative py-20 md:py-28 bg-d-900 grain overflow-hidden">
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 40% at 80% 50%, rgba(204,0,0,0.04) 0%, transparent 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-r/10 border border-r/20 rounded-full px-4 py-1.5 mb-6 reveal">
+                    <span class="text-r text-xs font-semibold tracking-[0.2em] uppercase">Who We Are</span>
+                </div>
+
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-8 reveal reveal-delay-1">
+                    RESTORE. PROTECT.<br><span class="text-r">ELEVATE.</span>
+                </h2>
+
+                <p class="text-g-light text-base sm:text-lg mb-6 reveal reveal-delay-2" style="line-height: 1.7;">
+                    At TJM Detailing we take pride in helping you restore, protect, and elevate the things that matter most - your vehicle and your home. Built on reliability, craftsmanship, and genuine care for our clients, we deliver high-quality services designed to make life easier and your surroundings look their best.
+                </p>
+            </div>
         </div>
     </section>
+
+
+    <!-- ============ OUR COMMITMENT ============ -->
+    <section class="relative py-20 md:py-28 bg-d-950 grain overflow-hidden">
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 30% 50%, rgba(79,111,135,0.05) 0%, transparent 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <!-- Text -->
+                    <div class="reveal">
+                        <div class="inline-flex items-center gap-2 bg-steel/10 border border-steel/20 rounded-full px-4 py-1.5 mb-6">
+                            <span class="text-steel text-xs font-semibold tracking-[0.2em] uppercase">Our Commitment</span>
+                        </div>
+
+                        <h2 class="font-display text-5xl sm:text-6xl font-bold text-gray-900 leading-none mb-6">
+                            SERVICE YOU<br>CAN <span class="text-r">TRUST</span>
+                        </h2>
+
+                        <p class="text-g-light text-base sm:text-lg mb-5" style="line-height: 1.7;">
+                            Whether we're detailing your car or refreshing your garden, our mission is simple: <span class="text-gray-900 font-medium">deliver exceptional results with friendly, dependable service you can trust.</span>
+                        </p>
+
+                        <p class="text-g-light text-base sm:text-lg" style="line-height: 1.7;">
+                            At TJM Detailing, we treat every job with the same attention to detail as if it were our own - because quality and pride in our work are what drive us.
+                        </p>
+                    </div>
+
+                    <!-- Trust stats -->
+                    <div class="reveal reveal-delay-1">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-d-900 border border-black/5 rounded-xl p-6 text-center" style="box-shadow: 0 4px 16px -4px rgba(0,0,0,0.06);">
+                                <div class="font-display text-4xl sm:text-5xl font-bold text-r mb-1">5.0</div>
+                                <p class="text-g text-xs font-medium uppercase tracking-wider">Google Rating</p>
+                            </div>
+                            <div class="bg-d-900 border border-black/5 rounded-xl p-6 text-center" style="box-shadow: 0 4px 16px -4px rgba(0,0,0,0.06);">
+                                <div class="font-display text-4xl sm:text-5xl font-bold text-r mb-1">100%</div>
+                                <p class="text-g text-xs font-medium uppercase tracking-wider">5-Star Reviews</p>
+                            </div>
+                            <div class="bg-d-900 border border-black/5 rounded-xl p-6 text-center" style="box-shadow: 0 4px 16px -4px rgba(0,0,0,0.06);">
+                                <div class="flex justify-center mb-2">
+                                    <svg class="w-8 h-8 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </div>
+                                <p class="text-g text-xs font-medium uppercase tracking-wider">Fully Insured</p>
+                            </div>
+                            <div class="bg-d-900 border border-black/5 rounded-xl p-6 text-center" style="box-shadow: 0 4px 16px -4px rgba(0,0,0,0.06);">
+                                <div class="flex justify-center mb-2">
+                                    <svg class="w-8 h-8 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <p class="text-g text-xs font-medium uppercase tracking-wider">Weekends Only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ TWO BRANCHES ============ -->
+    <section class="relative py-20 md:py-28 bg-d-900 grain overflow-hidden">
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 70% 30%, rgba(204,0,0,0.04) 0%, transparent 70%);"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 40% 50% at 20% 70%, rgba(58,125,68,0.04) 0%, transparent 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+            <div class="text-center mb-14 reveal">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-6">
+                    <span class="text-g-light text-xs font-semibold tracking-[0.2em] uppercase">What We Do</span>
+                </div>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none">
+                    TWO BRANCHES,<br>ONE <span class="text-r">STANDARD</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-10">
+                <!-- Auto Detailing -->
+                <a href="auto-detailing.html" class="branch-card branch-card-auto bg-d-950 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-1 block" style="text-decoration: none; color: inherit;">
+                    <div class="img-zoom aspect-[16/10]">
+                        <div class="relative w-full h-full">
+                            <img src="Assets/Auto Detailing/Exterior Detail 2.jpg" alt="Auto Detailing" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-r/5 mix-blend-multiply"></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="inline-flex items-center gap-2 bg-r/10 border border-r/20 rounded-full px-3 py-1 mb-4">
+                            <span class="text-r text-[10px] font-bold tracking-[0.2em] uppercase">Auto Detailing</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">AUTOMOTIVE<br>DETAILING</h3>
+                        <p class="text-g-light text-sm sm:text-base" style="line-height: 1.7;">
+                            Your vehicle is more than just transport - it's an investment. Our detailing services are carried out with precision and passion. Using professional products and proven techniques, we provide everything from interior deep cleans to paint enhancement and protective treatments, ensuring your car looks and feels like new.
+                        </p>
+                        <div class="mt-6 inline-flex items-center gap-2 text-r text-sm font-semibold">
+                            View Packages
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Garden Maintenance -->
+                <a href="gardening-yard-maintenance.html" class="branch-card branch-card-garden bg-d-950 border border-black/5 rounded-xl overflow-hidden reveal reveal-delay-2 block" style="text-decoration: none; color: inherit;">
+                    <div class="img-zoom aspect-[16/10]">
+                        <div class="relative w-full h-full">
+                            <img src="Assets/Gardening/Lawn Mowing.jpg" alt="Garden Maintenance" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="inline-flex items-center gap-2 bg-lawn/10 border border-lawn/20 rounded-full px-3 py-1 mb-4">
+                            <span class="text-lawn text-[10px] font-bold tracking-[0.2em] uppercase">Yard Maintenance</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">GARDEN<br>MAINTENANCE</h3>
+                        <p class="text-g-light text-sm sm:text-base" style="line-height: 1.7;">
+                            A well-maintained garden transforms the look and feel of your home. From regular mowing and edging to hedge trimming, green waste removal, and general outdoor upkeep, we keep your outdoor spaces clean, tidy, and enjoyable all year round.
+                        </p>
+                        <div class="mt-6 inline-flex items-center gap-2 text-lawn text-sm font-semibold">
+                            View Services
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ CTA ============ -->
+    <section class="relative py-20 md:py-28 bg-d-950 grain overflow-hidden">
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(204,0,0,0.06) 0%, transparent 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+            <div class="max-w-2xl mx-auto text-center reveal">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-6">
+                    READY TO<br><span class="text-r">GET STARTED?</span>
+                </h2>
+                <p class="text-g-light text-base sm:text-lg mb-10" style="line-height: 1.7;">
+                    Whether it's your vehicle or your yard, we're here to help. Get in touch today to book your next service.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="contact.html" class="btn-red text-base">
+                        Book an Appointment
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </a>
+                    <a href="tel:0447418866" class="btn-outline text-base">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        0447 418 866
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- ============ FOOTER ============ -->
     <footer class="bg-black border-t border-black/5">
@@ -898,6 +748,7 @@
                 <div>
                     <h4 class="font-display text-xl font-bold text-white mb-4">AUTO DETAILING</h4>
                     <ul class="space-y-2.5 text-sm text-g">
+                        <li><a href="about-auto-detailing.html" class="hover:text-white" style="transition: color 0.3s ease;">About Our Detailing</a></li>
                         <li><a href="interior-detail.html" class="hover:text-white" style="transition: color 0.3s ease;">Interior Detail</a></li>
                         <li><a href="exterior-detail.html" class="hover:text-white" style="transition: color 0.3s ease;">Exterior Detail</a></li>
                         <li><a href="maintenance-detail.html" class="hover:text-white" style="transition: color 0.3s ease;">Maintenance Detail</a></li>
@@ -991,7 +842,6 @@
             bar1.style.transform = '';
             bar2.style.opacity = '';
             bar3.style.transform = '';
-            // Close all accordions
             document.querySelectorAll('.mobile-accordion-content').forEach(el => el.classList.remove('open'));
             document.querySelectorAll('.mobile-accordion-chevron').forEach(el => el.classList.remove('open'));
         }
@@ -1004,11 +854,9 @@
                 const chevron = btn.querySelector('.mobile-accordion-chevron');
                 const isOpen = content.classList.contains('open');
 
-                // Close all others
                 document.querySelectorAll('.mobile-accordion-content').forEach(el => el.classList.remove('open'));
                 document.querySelectorAll('.mobile-accordion-chevron').forEach(el => el.classList.remove('open'));
 
-                // Toggle this one
                 if (!isOpen) {
                     content.classList.add('open');
                     chevron.classList.add('open');
