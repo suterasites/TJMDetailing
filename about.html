@@ -190,6 +190,15 @@
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
 
+        /* Value card hover */
+        .value-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px -12px rgba(204, 0, 0, 0.12), 0 8px 20px -8px rgba(0,0,0,0.08);
+        }
+
         /* Branch card */
         .branch-card {
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
@@ -628,6 +637,82 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="relative py-20 md:py-28 bg-d-900 grain">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 bg-black/[0.03] border border-black/10 rounded-full px-4 py-1.5 mb-5">
+                    <span class="text-g-light text-xs font-semibold tracking-wider uppercase">Why TJM</span>
+                </div>
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">WHY CHOOSE US</h2>
+                <p class="text-g text-base max-w-2xl mx-auto">We're local, hands-on, and committed to doing right by every client. Here's what you get when you book with TJM.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Card 1 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Attention to Detail</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">Whether it's your car or your yard, every surface gets the attention it deserves. We're not done until it's right.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Fully Insured</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">Your vehicle and property are in safe hands. We carry full insurance on every job, so you can relax while we work.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">We Come to You</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">We bring all the equipment and handle everything on-site. Your driveway, your yard - wherever works best. No hassle.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Professional Products &amp; Equipment</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">We use industry-grade detailing products and well-maintained equipment on every job. The right tools make the difference.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-1">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Weekend Convenience</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">We work Saturdays and Sundays, 8 AM to 5 PM - so you can get your car detailed or yard sorted without taking time off work.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="value-card bg-d-950 border border-black/5 rounded-xl p-7 relative overflow-hidden reveal reveal-delay-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-[0.03]" style="background: radial-gradient(circle at top right, #CC0000, transparent 60%);"></div>
+                    <div class="w-12 h-12 rounded-xl bg-r/10 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-r" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Fair, Transparent Pricing</h3>
+                    <p class="text-g text-sm" style="line-height: 1.7;">Clear pricing with no hidden fees or surprise charges. You know exactly what you're paying before we start.</p>
                 </div>
             </div>
         </div>
