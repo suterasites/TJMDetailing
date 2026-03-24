@@ -514,7 +514,6 @@
 
             <!-- Desktop CTA -->
             <div class="hidden lg:flex items-center gap-5">
-                </a>
                 <a href="tel:0447418866" class="text-g-light text-sm font-medium tracking-wide hover:text-gray-900" style="transition: color 0.3s ease;">
                     0447 418 866
                 </a>
@@ -1151,37 +1150,6 @@
 
     <!-- ============ SCRIPTS ============ -->
     <script>
-        // Service options by branch
-        const services = {
-            yard: [
-                { value: 'mowing', label: 'Lawn Mowing' },
-                { value: 'edging', label: 'Edging & Whipper Snipping' },
-                { value: 'hedge', label: 'Hedge Trimming' },
-                { value: 'weeding', label: 'Weeding Garden Beds' },
-                { value: 'greenwaste', label: 'Green Waste Removal' },
-                { value: 'tidy', label: 'General Yard Tidy' },
-            ]
-        };
-
-        const branchSelect = document.getElementById('branch');
-        const serviceSelect = document.getElementById('service');
-        const serviceWrapper = document.getElementById('serviceWrapper');
-
-        branchSelect.addEventListener('change', function() {
-            const branch = this.value;
-            const options = services[branch];
-
-            serviceSelect.innerHTML = '<option value="" disabled selected>Select a service</option>';
-            options.forEach(opt => {
-                const option = document.createElement('option');
-                option.value = opt.value;
-                option.textContent = opt.label;
-                serviceSelect.appendChild(option);
-            });
-
-            serviceWrapper.style.display = 'block';
-        });
-
         // Form submission
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
