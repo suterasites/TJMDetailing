@@ -90,6 +90,7 @@ TJM Detailing has **two main service branches**:
 | Hatch/Sedan    | A$130  | 1 hr 30 min |
 | SUV/4WD        | A$140  | 1 hr 45 min |
 | 7 Seater       | A$150  | 2 hrs       |
+| Small Truck    | A$190  | 2 hrs       |
 
 **Includes:**
 
