@@ -27,11 +27,11 @@ TJM Detailing has **two main service branches**:
 |-----------|------------------|
 | Monday    | Closed           |
 | Tuesday   | Closed           |
-| Wednesday | Closed           |
-| Thursday  | Closed           |
-| Friday    | Closed           |
-| Saturday  | 8:00 AM – 5:00 PM |
-| Sunday    | 8:00 AM – 5:00 PM |
+| Wednesday | 8:00 AM - 5:00 PM |
+| Thursday  | 8:00 AM - 5:00 PM |
+| Friday    | 8:00 AM - 5:00 PM |
+| Saturday  | 8:00 AM - 5:00 PM |
+| Sunday    | 8:00 AM - 5:00 PM |
 
 ---
 
@@ -139,7 +139,7 @@ TJM Detailing has **two main service branches**:
 
 ## Key Selling Points (for website copy)
 
-- **Weekend-only availability** - convenient for customers who work weekdays
+- **Wednesday to Sunday availability** - convenient for customers who work early in the week
 - **100% 5-star reviews** - strong social proof
 - **Fully insured** - professional and trustworthy
 - **Mobile/local service** - servicing Melbourne's West
@@ -151,7 +151,7 @@ TJM Detailing has **two main service branches**:
 
 ## Website Development Notes
 
-- The business operates **Saturday and Sunday only** (8 AM – 5 PM). This should be prominent so customers don't expect weekday availability.
+- The business operates **Wednesday to Sunday** (8 AM - 5 PM). This should be prominent so customers know when to book.
 - A **booking/contact CTA** should be highly visible on every page since bookings are essential.
 - Service pages should clearly distinguish between **vehicle size tiers** (Hatch/Sedan vs SUV/4WD vs Small Truck) for easy price comparison.
 - Consider a **before/after gallery** section to showcase detailing results.
@@ -264,10 +264,10 @@ Use this checklist for every page on the site. Each page must have the following
 | Item | Status | Value / Notes |
 |---|---|---|
 | Title Tag | ✅ | TJM Detailing - Auto Detailing & Garden Maintenance | Melbourne's West |
-| Meta Description | ✅ | Professional auto detailing and garden maintenance in Melbourne's West. Rated 5.0 on Google. Fully insured. Open weekends only. Call 0447 418 866. |
+| Meta Description | ✅ | Professional auto detailing and garden maintenance in Melbourne's West. Rated 5.0 on Google. Fully insured. Open Wednesday to Sunday. Call 0447 418 866. |
 | Page Canonical URL | ✅ | https://tjmdetailing.com.au/ |
 | Open Graph Title | ✅ | TJM Detailing - Auto Detailing & Garden Maintenance | Melbourne's West |
-| Open Graph Description | ✅ | Professional auto detailing and garden maintenance in Melbourne's West. 5-star rated, fully insured. Open weekends. Call 0447 418 866. |
+| Open Graph Description | ✅ | Professional auto detailing and garden maintenance in Melbourne's West. 5-star rated, fully insured. Open Wednesday to Sunday. Call 0447 418 866. |
 | Search Title | ⬜ | |
 | Search Description | ⬜ | |
 | JSON-LD Schema | ✅ | LocalBusiness with AggregateRating, OpeningHours |
@@ -300,10 +300,10 @@ Use this checklist for every page on the site. Each page must have the following
 | Item | Status | Value / Notes |
 |---|---|---|
 | Title Tag | ✅ | Contact Us - TJM Detailing | Melbourne's West |
-| Meta Description | ✅ | Get in touch with TJM Detailing for auto detailing and garden maintenance in Melbourne's West. Call 0447 418 866 or send us a message. Open weekends only. |
+| Meta Description | ✅ | Get in touch with TJM Detailing for auto detailing and garden maintenance in Melbourne's West. Call 0447 418 866 or send us a message. Open Wednesday to Sunday. |
 | Page Canonical URL | ✅ | https://tjmdetailing.com.au/contact.html |
 | Open Graph Title | ✅ | Contact Us - TJM Detailing | Melbourne's West |
-| Open Graph Description | ✅ | Contact TJM Detailing for auto detailing and garden maintenance in Melbourne's West. Call 0447 418 866. Open weekends only. |
+| Open Graph Description | ✅ | Contact TJM Detailing for auto detailing and garden maintenance in Melbourne's West. Call 0447 418 866. Open Wednesday to Sunday. |
 | Search Title | ⬜ | |
 | Search Description | ⬜ | |
 | JSON-LD Schema | ✅ | LocalBusiness |
