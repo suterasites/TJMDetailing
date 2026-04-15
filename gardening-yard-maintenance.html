@@ -1204,18 +1204,30 @@
                 body: new FormData(contactForm),
                 headers: { 'Accept': 'application/json' }
             }).then(function(response) {
-                if (response.ok) {
+                return response.json().then(function(data) {
+                    return { ok: response.ok, status: response.status, data: data };
+                });
+            }).then(function(result) {
+                if (result.ok) {
                     contactForm.style.display = 'none';
                     formSuccess.classList.remove('hidden');
                 } else {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
-                    alert('Something went wrong. Please try again or call us directly.');
+                    console.error('Formspree error:', result.status, result.data);
+                    var msg = 'Something went wrong. Please try again or call us directly.';
+                    if (result.data && result.data.errors && result.data.errors.length) {
+                        msg = 'Form error: ' + result.data.errors.map(function(e){return e.message;}).join(', ');
+                    } else if (result.data && result.data.error) {
+                        msg = 'Form error: ' + result.data.error;
+                    }
+                    alert(msg);
                 }
-            }).catch(function() {
+            }).catch(function(err) {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
-                alert('Something went wrong. Please try again or call us directly.');
+                console.error('Formspree network error:', err);
+                alert('Network error. Please try again or call us directly.');
             });
         });
 
