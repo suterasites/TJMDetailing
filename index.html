@@ -17,6 +17,23 @@
     <meta property="og:description" content="Professional auto detailing and garden maintenance in Melbourne's West. 5-star rated, fully insured. Open Wednesday to Sunday. Call 0447 418 866.">
     <meta property="og:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
 
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="TJM Detailing">
+    <meta property="og:image:width" content="1675">
+    <meta property="og:image:height" content="1232">
+    <meta property="og:image:alt" content="TJM Detailing logo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TJM Detailing - Auto Detailing &amp; Garden Maintenance | Melbourne's West">
+    <meta name="twitter:description" content="Professional auto detailing and garden maintenance in Melbourne's West. Rated 5.0 on Google. Fully insured. Open Wednesday to Sunday. Call 0447 418 866.">
+    <meta name="twitter:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Melbourne's West">
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
     tailwind.config = {
@@ -232,6 +249,23 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 40px -10px rgba(58, 125, 68, 0.15), 0 6px 16px -6px rgba(0,0,0,0.06);
         }
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: #CC0000;
+            color: #fff;
+            padding: 12px 20px;
+            z-index: 100;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -260,18 +294,28 @@
                 "closes": "17:00"
             }
         ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "100",
-            "bestRating": "5"
-        },
         "sameAs": []
     }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tjmdetailing.com.au/"
+        }
+    ]
+}
     </script>
 </head>
 
 <body class="antialiased overflow-x-hidden">
+
+    <a href="#main" class="skip-to-content">Skip to content</a>
 
     <!-- ============ NAVBAR ============ -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-black/5">
@@ -573,6 +617,8 @@
             </div>
         </div>
     </nav>
+
+    <main id="main">
 
 
     <!-- ============ HERO ============ -->
@@ -1032,6 +1078,7 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
+    </main>
     <footer class="bg-black border-t border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

@@ -16,6 +16,23 @@
     <meta property="og:description" content="Professional hedge trimming in Melbourne's West. Neat, shaped hedges for a clean, well-kept property. Fully insured. Call 0447 418 866.">
     <meta property="og:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
 
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="TJM Detailing">
+    <meta property="og:image:width" content="1675">
+    <meta property="og:image:height" content="1232">
+    <meta property="og:image:alt" content="TJM Detailing logo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hedge Trimming - TJM Detailing | Melbourne's West">
+    <meta name="twitter:description" content="Professional hedge trimming in Melbourne's West. Neat, shaped hedges for a clean, well-kept property. Fully insured. Call 0447 418 866.">
+    <meta name="twitter:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Melbourne's West">
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
     tailwind.config = {
@@ -246,6 +263,23 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 40px -10px rgba(58, 125, 68, 0.1), 0 6px 16px -6px rgba(0,0,0,0.06);
         }
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: #CC0000;
+            color: #fff;
+            padding: 12px 20px;
+            z-index: 100;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -262,9 +296,37 @@
         "description": "Professional hedge trimming service providing neat, shaped hedges for a clean, well-kept property in Melbourne's West."
     }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tjmdetailing.com.au/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Garden Maintenance",
+            "item": "https://tjmdetailing.com.au/gardening-yard-maintenance.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hedge Trimming",
+            "item": "https://tjmdetailing.com.au/hedge-trimming.html"
+        }
+    ]
+}
+    </script>
 </head>
 
 <body class="antialiased overflow-x-hidden">
+
+    <a href="#main" class="skip-to-content">Skip to content</a>
 
     <!-- ============ NAVBAR ============ -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950/90 backdrop-blur-md border-b border-black/5">
@@ -568,6 +630,21 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="bg-d-950 border-b border-black/5 pt-16 md:pt-[72px]">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-3">
+            <ol class="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-g-light">
+                <li><a href="/" class="hover:text-r transition-colors">Home</a></li>
+                <li class="text-gray-500" aria-hidden="true">/</li>
+                <li><a href="/gardening-yard-maintenance.html" class="hover:text-r transition-colors">Garden Maintenance</a></li>
+                <li class="text-gray-500" aria-hidden="true">/</li>
+                <li class="text-r" aria-current="page">Hedge Trimming</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main">
+
 
     <!-- ============ HERO ============ -->
     <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden grain">
@@ -780,6 +857,7 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
+    </main>
     <footer class="bg-black border-t border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

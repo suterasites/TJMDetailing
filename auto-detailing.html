@@ -16,6 +16,23 @@
     <meta property="og:description" content="Professional auto detailing in Melbourne's West. Interior, exterior, maintenance and full detail packages. 5-star rated, fully insured.">
     <meta property="og:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
 
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="TJM Detailing">
+    <meta property="og:image:width" content="1675">
+    <meta property="og:image:height" content="1232">
+    <meta property="og:image:alt" content="TJM Detailing logo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Auto Detailing Packages - TJM Detailing | Melbourne's West">
+    <meta name="twitter:description" content="Professional auto detailing in Melbourne's West. Interior, exterior, maintenance &amp; full detail packages. Rated 5.0 on Google. Fully insured. Call 0447 418 866.">
+    <meta name="twitter:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Melbourne's West">
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
     tailwind.config = {
@@ -296,6 +313,23 @@
             background: #0f1117;
             color: #fff;
         }
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: #CC0000;
+            color: #fff;
+            padding: 12px 20px;
+            z-index: 100;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -327,9 +361,31 @@
         "description": "Professional auto detailing packages including interior, exterior, maintenance and full detail services."
     }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tjmdetailing.com.au/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Auto Detailing",
+            "item": "https://tjmdetailing.com.au/auto-detailing.html"
+        }
+    ]
+}
+    </script>
 </head>
 
 <body class="antialiased overflow-x-hidden">
+
+    <a href="#main" class="skip-to-content">Skip to content</a>
 
     <!-- ============ NAVBAR ============ -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-d-950 border-b border-black/5">
@@ -631,6 +687,19 @@
             </div>
         </div>
     </nav>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="bg-d-950 border-b border-black/5 pt-16 md:pt-[72px]">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-3">
+            <ol class="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-g-light">
+                <li><a href="/" class="hover:text-r transition-colors">Home</a></li>
+                <li class="text-gray-500" aria-hidden="true">/</li>
+                <li class="text-r" aria-current="page">Auto Detailing</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main">
 
 
     <!-- ============ HERO ============ -->
@@ -1445,6 +1514,7 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
+    </main>
     <footer class="bg-black border-t border-black/5">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
