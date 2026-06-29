@@ -7,13 +7,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Assets/apple-touch-icon.png">
     <link rel="shortcut icon" href="Assets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawn Mowing - TJM Detailing | Melbourne's West</title>
-    <meta name="description" content="Professional lawn mowing in Melbourne's West. Clean, even cuts for a well-maintained yard. Fully insured, 100% 5-star reviews. Call 0447 418 866.">
-    <link rel="canonical" href="https://tjmdetailing.com.au/lawn-mowing.html">
+    <title>Privacy Policy | TJM Detailing</title>
+    <meta name="description" content="How TJM Detailing collects, uses, stores and protects your personal information when you request a quote or booking. In line with the Australian Privacy Act 1988.">
+    <link rel="canonical" href="https://tjmdetailing.com.au/privacy.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tjmdetailing.com.au/lawn-mowing.html">
-    <meta property="og:title" content="Lawn Mowing - TJM Detailing | Melbourne's West">
-    <meta property="og:description" content="Professional lawn mowing in Melbourne's West. Clean, even cuts for a well-maintained yard. Fully insured, 5-star reviews. Call 0447 418 866.">
+    <meta property="og:url" content="https://tjmdetailing.com.au/privacy.html">
+    <meta property="og:title" content="Privacy Policy | TJM Detailing">
+    <meta property="og:description" content="How TJM Detailing collects, uses, stores and protects your personal information, in line with the Australian Privacy Act 1988.">
     <meta property="og:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
 
     <meta property="og:locale" content="en_AU">
@@ -24,8 +24,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lawn Mowing - TJM Detailing | Melbourne's West">
-    <meta name="twitter:description" content="Professional lawn mowing in Melbourne's West. Clean, even cuts for a well-maintained yard. Fully insured, 100% 5-star reviews. Call 0447 418 866.">
+    <meta name="twitter:title" content="Privacy Policy | TJM Detailing">
+    <meta name="twitter:description" content="How TJM Detailing collects, uses, stores and protects your personal information, in line with the Australian Privacy Act 1988.">
     <meta name="twitter:image" content="https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png">
 
     <!-- Geo -->
@@ -43,7 +43,7 @@
                     r: { DEFAULT: '#CC0000', dark: '#990000', light: '#E61A1A' },
                     steel: { DEFAULT: '#4f6f87', dark: '#3d5a6e', light: '#6a8da6' },
                     g: { DEFAULT: '#666666', light: '#888888' },
-                    lawn: { DEFAULT: '#3a7d44', dark: '#2a5e32', deep: '#1a3f20', light: '#4a9d56' },
+                    lawn: { DEFAULT: '#3a7d44', dark: '#2a5e32', deep: '#1a3f20' },
                 },
                 fontFamily: {
                     display: ['"Teko"', 'sans-serif'],
@@ -79,7 +79,7 @@
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f5f5f5; }
-        ::-webkit-scrollbar-thumb { background: #3a7d44; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: #CC0000; border-radius: 3px; }
 
         /* Buttons */
         .btn-red {
@@ -100,25 +100,6 @@
         }
         .btn-red:focus-visible { outline: 2px solid #E61A1A; outline-offset: 3px; }
         .btn-red:active { transform: translateY(0); }
-
-        .btn-lawn {
-            background: #3a7d44;
-            color: #fff;
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background-color 0.3s ease;
-        }
-        .btn-lawn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px -8px rgba(58, 125, 68, 0.45), 0 4px 12px -4px rgba(58, 125, 68, 0.25);
-            background: #4a9d56;
-        }
-        .btn-lawn:focus-visible { outline: 2px solid #4a9d56; outline-offset: 3px; }
-        .btn-lawn:active { transform: translateY(0); }
 
         .btn-outline {
             border: 1.5px solid rgba(0,0,0,0.15);
@@ -200,6 +181,25 @@
             transform: rotate(180deg);
         }
 
+        /* Reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Mobile menu */
+        .mobile-menu { transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+        .mobile-menu.hidden { opacity: 0; transform: translateY(-10px); pointer-events: none; }
+        .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
         /* Nav link hover */
         .nav-link {
             position: relative;
@@ -217,51 +217,84 @@
         .nav-link:hover::after { width: 100%; }
         .nav-link:focus-visible { outline: 2px solid #CC0000; outline-offset: 4px; border-radius: 2px; }
 
-        /* Mobile menu */
-        .mobile-menu { transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
-        .mobile-menu.hidden { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-        .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
-
-        /* Reveal on scroll */
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        /* Form inputs */
+        .form-input {
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.12);
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            color: #1a1a1a;
+            font-size: 0.875rem;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            outline: none;
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .form-input:hover {
+            border-color: rgba(0,0,0,0.2);
+            background: #fff;
         }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
+        .form-input:focus {
+            border-color: #CC0000;
+            box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+            background: #fff;
+        }
+        .form-input::placeholder {
+            color: #8e8e8e;
+        }
 
-        /* Card hover */
-        .service-card {
+        /* Select styling */
+        .form-select {
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.12);
+            border-radius: 6px;
+            padding: 0.75rem 2.5rem 0.75rem 1rem;
+            color: #1a1a1a;
+            font-size: 0.875rem;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238e8e8e' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1rem;
+        }
+        .form-select:hover {
+            border-color: rgba(0,0,0,0.2);
+            background-color: #fff;
+        }
+        .form-select:focus {
+            border-color: #CC0000;
+            box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+            background-color: #fff;
+        }
+        .form-select option {
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        /* Checkbox service items */
+        .service-checkbox {
+            transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .service-checkbox:hover {
+            border-color: rgba(0,0,0,0.2);
+            background-color: #fafafa;
+        }
+        .service-checkbox:has(input:checked) {
+            border-color: #CC0000;
+            background-color: rgba(204, 0, 0, 0.04);
+            box-shadow: 0 0 0 1px rgba(204, 0, 0, 0.15);
+        }
+
+        /* Info card */
+        .info-card {
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
         }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px -12px rgba(58, 125, 68, 0.12), 0 8px 20px -8px rgba(0,0,0,0.08);
-        }
-
-        /* Image zoom */
-        .img-zoom { overflow: hidden; }
-        .img-zoom img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
-        .img-zoom:hover img { transform: scale(1.06); }
-
-        /* Feature list check animation */
-        .feature-check {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        /* Process step */
-        .process-step {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-        }
-        .process-step:hover {
+        .info-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 40px -10px rgba(58, 125, 68, 0.1), 0 6px 16px -6px rgba(0,0,0,0.06);
+            box-shadow: 0 16px 40px -10px rgba(204, 0, 0, 0.1), 0 6px 16px -6px rgba(0,0,0,0.06);
         }
         /* Skip to content link */
         .skip-to-content {
@@ -280,20 +313,84 @@
             outline: 3px solid #fff;
             outline-offset: 2px;
         }
+
+        /* Scoped legal document styling */
+        .legal-doc {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #2a2a2a;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+        .legal-doc h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .legal-doc .last-updated {
+            color: #888888;
+            font-size: 0.875rem;
+            margin-bottom: 2.5rem;
+        }
+        .legal-doc .intro {
+            font-size: 1.0625rem;
+            color: #3a3a3a;
+            margin-bottom: 2rem;
+        }
+        .legal-doc h2 {
+            font-family: 'Teko', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #1a1a1a;
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .legal-doc p {
+            margin-bottom: 1rem;
+        }
+        .legal-doc ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .legal-doc li {
+            margin-bottom: 0.5rem;
+        }
+        .legal-doc a {
+            color: #CC0000;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.3s ease;
+        }
+        .legal-doc a:hover {
+            color: #E61A1A;
+        }
     </style>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Lawn Mowing",
-        "provider": {
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "description": "How TJM Detailing collects, uses, stores and protects your personal information, in line with the Australian Privacy Act 1988.",
+        "url": "https://tjmdetailing.com.au/privacy.html",
+        "inLanguage": "en-AU",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "TJM Detailing",
+            "url": "https://tjmdetailing.com.au/"
+        },
+        "publisher": {
             "@type": "LocalBusiness",
             "name": "TJM Detailing",
+            "image": "https://tjmdetailing.com.au/Assets/TJM%20detailing%20logo%20FA.png",
             "telephone": "0447 418 866",
             "email": "hello@tjmdetailing.com.au"
-        },
-        "areaServed": { "@type": "Place", "name": "Melbourne's West" },
-        "description": "Professional lawn mowing service providing clean, even cuts for a well-maintained yard in Melbourne's West."
+        }
     }
     </script>
     <script type="application/ld+json">
@@ -310,14 +407,8 @@
         {
             "@type": "ListItem",
             "position": 2,
-            "name": "Garden Maintenance",
-            "item": "https://tjmdetailing.com.au/gardening-yard-maintenance.html"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Lawn Mowing",
-            "item": "https://tjmdetailing.com.au/lawn-mowing.html"
+            "name": "Privacy Policy",
+            "item": "https://tjmdetailing.com.au/privacy.html"
         }
     ]
 }
@@ -493,44 +584,8 @@
                 </div>
 
 
-                <!-- Contact Mega Dropdown -->
-                <div class="mega-trigger">
-                    <a href="contact.html" class="nav-link text-g-light text-sm font-medium tracking-wide uppercase px-4 py-2 inline-flex items-center gap-1.5">
-                        Contact
-                        <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                    <div class="mega-panel pt-4" style="width: 380px; right: 0; left: auto; transform: translateY(8px);">
-                        <div class="bg-d-900 border border-black/8 rounded-xl shadow-2xl shadow-black/15 overflow-hidden">
-                            <div class="h-[2px] bg-gradient-to-r from-transparent via-r to-transparent"></div>
-                            <div class="p-6">
-                                <div class="space-y-5">
-                                    <!-- Phone -->
-                                    <a href="tel:0447418866" class="flex items-center gap-4 group">
-                                        <div>
-                                            <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">0447 418 866</p>
-                                            <p class="text-g text-xs">Call to book your appointment</p>
-                                        </div>
-                                    </a>
-
-                                    <!-- Email -->
-                                    <a href="mailto:hello@tjmdetailing.com.au" class="flex items-center gap-4 group">
-                                        <div>
-                                            <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">hello@tjmdetailing.com.au</p>
-                                            <p class="text-g text-xs">Send us an email</p>
-                                        </div>
-                                    </a>
-
-                                    <div class="border-t border-black/5 pt-4">
-                                        <a href="contact.html" class="btn-red text-sm w-full justify-center">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                            Book an Appointment
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Contact -->
+                <a href="contact.html" class="nav-link text-g-light text-sm font-medium tracking-wide uppercase px-4 py-2">Contact</a>
             </div>
 
             <!-- Desktop CTA -->
@@ -555,7 +610,6 @@
             <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-0">
 
                 <a href="index.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">Home</a>
-
                 <a href="about.html" class="text-g-light text-base font-medium py-3 border-b border-black/5 hover:text-gray-900" style="transition: color 0.3s ease;" onclick="closeMenu()">About Us</a>
 
                 <!-- Auto Detailing Accordion -->
@@ -636,9 +690,7 @@
             <ol class="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-g-light">
                 <li><a href="/" class="hover:text-r transition-colors">Home</a></li>
                 <li class="text-gray-500" aria-hidden="true">/</li>
-                <li><a href="/gardening-yard-maintenance.html" class="hover:text-r transition-colors">Garden Maintenance</a></li>
-                <li class="text-gray-500" aria-hidden="true">/</li>
-                <li class="text-r" aria-current="page">Lawn Mowing</li>
+                <li class="text-r" aria-current="page">Privacy Policy</li>
             </ol>
         </div>
     </nav>
@@ -647,212 +699,99 @@
 
 
     <!-- ============ HERO ============ -->
-    <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden grain">
-        <div class="absolute inset-0 z-0 bg-d-950">
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 30% 50%, rgba(58,125,68,0.08) 0%, transparent 70%);"></div>
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse 40% 40% at 70% 60%, rgba(58,125,68,0.05) 0%, transparent 70%);"></div>
+    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden grain">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-d-950"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(204,0,0,0.08) 0%, transparent 70%);"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse 40% 50% at 20% 60%, rgba(58, 125, 68, 0.05) 0%, transparent 70%);"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-16 md:pt-32 md:pb-20">
             <div class="max-w-3xl">
-                <a href="gardening-yard-maintenance.html" class="inline-flex items-center gap-2 text-g text-sm mb-6 hover:text-gray-900 reveal" style="transition: color 0.3s ease;">
+                <a href="index.html" class="inline-flex items-center gap-2 text-g text-sm mb-6 hover:text-gray-900 reveal" style="transition: color 0.3s ease;">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-                    All Garden Maintenance Services
+                    Back to Home
                 </a>
 
 
                 <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-6 reveal reveal-delay-1">
-                    LAWN<br>
-                    <span class="text-lawn">MOWING</span>
+                    PRIVACY<br>
+                    <span class="text-r">POLICY</span>
                 </h1>
 
                 <p class="text-lg sm:text-xl md:text-2xl text-g-light font-light mb-4 reveal reveal-delay-2" style="line-height: 1.5;">
-                    A clean, even cut across your entire lawn - the foundation of a <span class="text-gray-900 font-medium">well-maintained yard</span>.
+                    How we handle <span class="text-gray-900 font-medium">your personal information</span>.
                 </p>
-                <p class="text-g text-sm sm:text-base mb-10 reveal reveal-delay-2">
-                    Rated 5.0 on Google &bull; Fully Insured &bull; NDIS Provider &bull; Melbourne's West &bull; Wed-Sun
+                <p class="text-g text-sm sm:text-base reveal reveal-delay-2">
+                    In line with the Australian Privacy Act 1988 &bull; Melbourne's West
                 </p>
-
-                <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
-                    <a href="contact.html" class="btn-lawn text-base">
-                        Get a Free Quote
-                    </a>
-                    <a href="#included" class="btn-outline text-base">
-                        View Details
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- ============ TRUST BAR ============ -->
-    <section class="relative bg-d-800 border-y border-black/5">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 md:py-8">
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
-                <div class="flex items-center gap-3 reveal">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Rated 5.0</p>
-                        <p class="text-g text-xs">on Google</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-1">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Fully Insured</p>
-                        <p class="text-g text-xs">Professional Service</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-2">
-                    <div>
-                        <p class="text-lawn font-semibold text-sm">NDIS Provider</p>
-                        <p class="text-g text-xs">Registered Provider</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-3">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Open Wed-Sun</p>
-                        <p class="text-g text-xs">8am-5pm</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3 reveal reveal-delay-3">
-                    <div>
-                        <p class="text-gray-900 font-semibold text-sm">Melbourne's West</p>
-                        <p class="text-g text-xs">Mobile Service</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ============ PRIVACY POLICY ============ -->
+    <section class="relative py-16 md:py-24 bg-d-950 grain overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.03]" style="background: radial-gradient(ellipse at 80% 50%, #CC0000, transparent 60%);"></div>
 
-
-    <!-- ============ WHAT'S INCLUDED ============ -->
-    <section id="included" class="relative py-20 md:py-28 bg-d-950 grain">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">WHAT'S INCLUDED</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Every lawn mowing service delivers a clean, consistent cut that keeps your yard looking its best.</p>
-            </div>
+            <article class="legal-doc reveal">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated 29 June 2026</p>
 
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Image -->
-                <div class="img-zoom rounded-xl overflow-hidden relative reveal">
-                    <img src="Assets/Gardening &amp; Yard Care/Lawn Mowing Real.jpeg" alt="Lawn mowing - clean, even cut across entire lawn" class="w-full h-80 md:h-[480px] object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute inset-0 bg-lawn/5 mix-blend-multiply"></div>
-                    <div class="absolute bottom-5 left-5 z-10">
-                        <span class="bg-lawn/90 text-white text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded">Call for a Quote</span>
-                    </div>
-                </div>
+                <p class="intro">This policy explains how TJM Detailing ("we", "us", "our") collects, uses, stores and protects the personal information you provide when you use our website, request a quote or booking, or otherwise contact us. We handle your information in line with the Australian Privacy Principles under the Privacy Act 1988 (Cth).</p>
 
-                <!-- Features -->
-                <div class="reveal reveal-delay-1">
-                    <div class="space-y-6">
-                        <!-- Feature 1 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-black/5 process-step">
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">Even, Consistent Cut</h3>
-                                <p class="text-g text-sm">We mow your entire lawn to an even height, ensuring a clean and professional finish across the whole yard.</p>
-                            </div>
-                        </div>
+                <h2>Information we collect</h2>
+                <p>When you submit a form on this website, or call, email or message us, we may collect:</p>
+                <ul>
+                    <li>Your name and contact name</li>
+                    <li>Your phone number and email address</li>
+                    <li>Your address or suburb and details of the service you are asking about</li>
+                    <li>Any details, photos or messages you choose to send us</li>
+                    <li>Basic technical and analytics data (such as IP address, browser type and pages visited) collected automatically when you browse the site</li>
+                </ul>
 
-                        <!-- Feature 2 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-black/5 process-step">
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">Clipping Management</h3>
-                                <p class="text-g text-sm">Clippings collected or mulched to your preference, leaving your lawn neat and tidy after every visit.</p>
-                            </div>
-                        </div>
+                <h2>How we use your information</h2>
+                <ul>
+                    <li>To respond to your enquiry and provide a quote or booking</li>
+                    <li>To carry out and manage the service you engage us for</li>
+                    <li>To contact you, including by phone, SMS or email</li>
+                    <li>To improve our website and understand how visitors use it</li>
+                    <li>To meet our legal, tax and insurance obligations</li>
+                </ul>
+                <p>We only use your information for the purpose you gave it to us, for a directly related purpose you would reasonably expect, or where you have consented.</p>
 
-                        <!-- Feature 3 -->
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-d-900 border border-black/5 process-step">
-                            <div>
-                                <h3 class="text-gray-900 font-semibold text-base mb-1">Edge-to-Edge Coverage</h3>
-                                <p class="text-g text-sm">Every corner and section of your lawn is covered, including around garden beds, fences, and obstacles.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <h2>How we collect it</h2>
+                <p>We collect most information directly from you, through the form on this website (handled by our form provider, Formspree), or when you call, text or email us. Bookings made through our website use Square, our appointment booking provider. Some technical data is collected automatically through standard web analytics.</p>
 
+                <h2>Who we share it with</h2>
+                <p>We do not sell your personal information. We share it only where it is needed to run our business or meet our obligations, including with:</p>
+                <ul>
+                    <li>Formspree, which processes and delivers our website form submissions</li>
+                    <li>Square, which processes our online bookings and payments</li>
+                    <li>Our website host and analytics providers</li>
+                    <li>Suppliers or contractors where this is necessary to provide your service</li>
+                    <li>Government bodies or professional advisers where required by law</li>
+                </ul>
 
-    <!-- ============ OTHER SERVICES ============ -->
-    <section class="relative py-20 md:py-28 bg-d-900 grain">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-            <div class="text-center mb-12 reveal">
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">OTHER SERVICES</h2>
-                <p class="text-g text-base max-w-2xl mx-auto">Explore our full range of garden maintenance services.</p>
-            </div>
+                <h2>Storing and protecting your information</h2>
+                <p>We take reasonable steps to protect your information from misuse, loss and unauthorised access, and we keep it only as long as we need it for the purposes above or as the law requires. No method of transmission over the internet is completely secure, but we use reputable providers and encrypted connections wherever possible.</p>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <!-- Edging & Whipper Snipping -->
-                <a href="edging-whipper-snipping.html" class="service-card bg-d-800 border border-black/5 rounded-xl p-6 text-center group reveal">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">EDGING &amp; SNIPPING</h3>
-                    <p class="text-g text-xs">Crisp, defined edges along driveways and paths.</p>
-                </a>
+                <h2>Cookies and analytics</h2>
+                <p>Our website may use cookies and similar tools to help it work properly and to measure how it is used. You can disable cookies in your browser settings, though some parts of the site may not work as well as a result.</p>
 
-                <!-- Hedge Trimming -->
-                <a href="hedge-trimming.html" class="service-card bg-d-800 border border-black/5 rounded-xl p-6 text-center group reveal reveal-delay-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">HEDGE TRIMMING</h3>
-                    <p class="text-g text-xs">Neat, shaped hedges for a clean look.</p>
-                </a>
+                <h2>Accessing or correcting your information</h2>
+                <p>You can ask us what personal information we hold about you, ask us to correct it, or ask us to delete it. To make a request, or if you have a privacy concern or complaint, contact us using the details below and we will respond within a reasonable time.</p>
 
-                <!-- Weeding Garden Beds -->
-                <a href="weeding-garden-beds.html" class="service-card bg-d-800 border border-black/5 rounded-xl p-6 text-center group reveal reveal-delay-2">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">WEEDING</h3>
-                    <p class="text-g text-xs">Thorough weeding to keep beds healthy.</p>
-                </a>
+                <h2>Contact us</h2>
+                <p>TJM Detailing<br>
+                Melbourne's West, VIC<br>
+                Phone: <a href="tel:0447418866">0447 418 866</a><br>
+                Email: <a href="mailto:hello@tjmdetailing.com.au">hello@tjmdetailing.com.au</a></p>
 
-                <!-- Green Waste Removal -->
-                <a href="green-waste-removal.html" class="service-card bg-d-800 border border-black/5 rounded-xl p-6 text-center group reveal">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">GREEN WASTE REMOVAL</h3>
-                    <p class="text-g text-xs">Collection and disposal of garden waste.</p>
-                </a>
-
-                <!-- General Yard Tidy -->
-                <a href="general-yard-tidy.html" class="service-card bg-d-800 border border-black/5 rounded-xl p-6 text-center group reveal reveal-delay-1">
-                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">GENERAL YARD TIDY</h3>
-                    <p class="text-g text-xs">A complete clean-up of your outdoor space.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============ BOOK CTA ============ -->
-    <section class="relative py-20 md:py-28 bg-d-950 border-t border-black/5 grain">
-        <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(58,125,68,0.06) 0%, transparent 70%);"></div>
-        <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center relative z-10">
-            <div class="reveal">
-                <div class="w-16 h-16 rounded-xl bg-lawn/10 flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-8 h-8 text-lawn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </div>
-                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-none mb-4">READY TO BOOK?</h2>
-                <p class="text-g text-base mb-3">Give us a call to get a free quote for your lawn mowing service. We're available Wednesday to Sunday, 8am - 5pm.</p>
-                <p class="text-g-light text-sm mb-10">Bookings essential &bull; Melbourne's West &bull; Mobile service</p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:0447418866" class="btn-lawn text-lg px-8 py-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        0447 418 866
-                    </a>
-                    <a href="gardening-yard-maintenance.html" class="btn-outline text-base">
-                        View All Services
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Elfsight Google Reviews | TJM Detailing -->
-    <section class="bg-black py-16">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-25d79ac5-9b3c-45de-8a27-148e40f124e1" data-elfsight-app-lazy></div>
+                <h2>Changes to this policy</h2>
+                <p>We may update this policy from time to time. The current version will always be available on this page, with the date it was last updated shown at the top.</p>
+            </article>
         </div>
     </section>
 
