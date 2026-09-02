@@ -239,7 +239,9 @@ def render(svc_slug, sub):
     meta = ("Mobile {s} in {sub} from ${p}. We come to you, Wed-Sun. Fully insured, "
             "rated 5.0 on Google. Call {ph}.").format(s=svc_lower, sub=sub_name, p=svc["price_from"], ph=PHONE)
     pairs = faq_pairs(svc, sub_name)
-    canon = DOMAIN + "/" + slug + ".html"
+    # Clean URL: Cloudflare 308s .html -> extensionless, so declaring the .html
+    # form here hands Google a canonical that redirects. Site swept 2026-09-02.
+    canon = DOMAIN + "/" + slug
 
     service_jsonld = {
         "@context": "https://schema.org", "@type": "Service",
