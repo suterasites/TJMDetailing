@@ -203,12 +203,16 @@ def faq_jsonld(pairs):
     return json.dumps(items, ensure_ascii=False, indent=8).rstrip()
 
 
+# Links are the extension-less form on purpose. The host 308s /page.html -> /page,
+# so a .html link hands Google a redirect instead of the page, and the clean URL the
+# canonical nominates never gets linked from anywhere. That is what left 16 TJM pages
+# "unknown to Google" on 2026-09-03. Site swept and this generator fixed the same day.
 def other_services_html(svc_slug, sub_slug, sub_name):
     cards = []
     for rel in SERVICES[svc_slug]["related"]:
         r = SERVICES[rel]
         cards.append(
-            '                <a href="' + rel + '-' + sub_slug + '.html" class="service-card block bg-white border '
+            '                <a href="/' + rel + '-' + sub_slug + '" class="service-card block bg-white border '
             'border-black/8 rounded-xl p-6 group">\n'
             '                    <h3 class="font-display text-2xl font-bold text-gray-900 group-hover:text-r" '
             'style="transition: color 0.3s ease;">' + r["name"] + ' in ' + sub_name + '</h3>\n'
@@ -223,7 +227,7 @@ def other_areas_html(svc_slug, this_slug):
         if s["slug"] == this_slug:
             continue
         links.append(
-            '                <a href="' + svc_slug + '-' + s["slug"] + '.html" class="text-g hover:text-r '
+            '                <a href="/' + svc_slug + '-' + s["slug"] + '" class="text-g hover:text-r '
             'text-sm font-medium" style="transition: color 0.3s ease;">' + s["name"] + '</a>')
     return "\n".join(links)
 
@@ -266,7 +270,7 @@ def render(svc_slug, sub):
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": DOMAIN + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Auto Detailing", "item": DOMAIN + "/auto-detailing.html"},
+            {"@type": "ListItem", "position": 2, "name": "Auto Detailing", "item": DOMAIN + "/auto-detailing"},
             {"@type": "ListItem", "position": 3, "name": svc["name"] + " " + sub_name, "item": canon},
         ],
     }
@@ -326,9 +330,9 @@ def render(svc_slug, sub):
 
     <!-- BREADCRUMB -->
     <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-5 sm:px-8 pt-24 md:pt-28 pb-2 text-sm text-g">
-        <a href="index.html" class="hover:text-r" style="transition:color .3s">Home</a>
+        <a href="/" class="hover:text-r" style="transition:color .3s">Home</a>
         <span class="mx-2 text-g/40">/</span>
-        <a href="auto-detailing.html" class="hover:text-r" style="transition:color .3s">Auto Detailing</a>
+        <a href="/auto-detailing" class="hover:text-r" style="transition:color .3s">Auto Detailing</a>
         <span class="mx-2 text-g/40">/</span>
         <span class="text-gray-900">@@SVC@@ @@SUB@@</span>
     </nav>
@@ -346,7 +350,7 @@ def render(svc_slug, sub):
             <p class="text-white/70 text-lg md:text-xl max-w-2xl mb-8 reveal reveal-delay-2">@@HERO_SUB@@</p>
             <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
                 <a href="tel:@@TEL@@" class="btn-red text-base">Call @@PHONE@@</a>
-                <a href="contact.html" class="btn-outline text-base" style="color:#fff;border-color:rgba(255,255,255,0.25)">Book Online</a>
+                <a href="/contact" class="btn-outline text-base" style="color:#fff;border-color:rgba(255,255,255,0.25)">Book Online</a>
             </div>
         </div>
     </section>
@@ -430,7 +434,7 @@ def render(svc_slug, sub):
             <p class="text-white/60 text-lg mb-8 max-w-xl mx-auto reveal reveal-delay-1">Bookings are essential and fill up fast. Call or message us to lock in a time that suits you.</p>
             <div class="flex flex-wrap gap-4 justify-center reveal reveal-delay-2">
                 <a href="tel:@@TEL@@" class="btn-red text-lg px-8 py-4">Call @@PHONE@@</a>
-                <a href="contact.html" class="btn-outline text-lg px-8 py-4" style="color:#fff;border-color:rgba(255,255,255,0.25)">Book Online</a>
+                <a href="/contact" class="btn-outline text-lg px-8 py-4" style="color:#fff;border-color:rgba(255,255,255,0.25)">Book Online</a>
             </div>
         </div>
     </section>
