@@ -302,6 +302,14 @@
             outline: 3px solid #fff;
             outline-offset: 2px;
         }
+
+        /* Ceramic coating enquiry card */
+        .cc-contact-card { display: flex; flex-direction: column; gap: 1.25rem; }
+        .cc-contact-card .btn-red { align-self: flex-start; flex-shrink: 0; }
+        @media (min-width: 640px) {
+            .cc-contact-card { flex-direction: row; align-items: center; justify-content: space-between; }
+            .cc-contact-card .btn-red { align-self: center; }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -426,6 +434,12 @@
                                                 <div>
                                                     <span class="text-gray-900 text-sm font-semibold block leading-tight">Headlight Restoration</span>
                                                     <span class="text-g text-[11px]">Remove oxidation, restore clarity</span>
+                                                </div>
+                                            </a>
+                                            <a href="/ceramic-coating" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
+                                                <div>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Ceramic Coating</span>
+                                                    <span class="text-g text-[11px]">Enquire online for a quote</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -586,6 +600,9 @@
                             <a href="/headlight-restoration" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Headlight Restoration</span><span class="text-r text-xs font-semibold">$100</span>
                             </a>
+                            <a href="/ceramic-coating" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                                <span>Ceramic Coating</span><span class="text-r text-xs font-semibold">Enquire</span>
+                            </a>
                             <a href="/auto-detailing" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>View All Packages</span>
                             </a>
@@ -683,6 +700,23 @@
         <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.03]" style="background: radial-gradient(ellipse at 80% 50%, #CC0000, transparent 60%);"></div>
 
         <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+
+            <!-- Ceramic Coating Enquiry -->
+            <div class="cc-contact-card bg-d-900 border border-black/8 rounded-xl p-6 sm:p-8 mb-6 reveal">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-r/10 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-r" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                    </div>
+                    <div>
+                        <h2 id="ceramic-contact-title" class="font-display text-2xl font-bold text-gray-900">CERAMIC COATING ENQUIRY</h2>
+                        <p class="text-g text-sm">After a ceramic coating? Tell us about your vehicle and we'll recommend the best option.</p>
+                    </div>
+                </div>
+                <a href="/ceramic-coating" class="btn-red text-sm" aria-label="Enquire now about a ceramic coating">
+                    Enquire Now
+                    <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
 
             <!-- Two Column Layout -->
             <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-8">

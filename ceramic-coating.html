@@ -312,9 +312,9 @@
             font-size: 1rem;
             transition: background-color 0.2s ease, border-color 0.2s ease;
         }
-        .cc-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+        .cc-input::placeholder { color: rgba(255, 255, 255, 0.7); }
         .cc-input:hover { background-color: rgba(255, 255, 255, 0.16); }
-        .cc-input:focus { outline: none; border-color: rgba(255, 255, 255, 0.65); background-color: rgba(255, 255, 255, 0.18); }
+        .cc-input:focus { outline: 2px solid #fff; outline-offset: 2px; background-color: rgba(255, 255, 255, 0.18); }
 
         select.cc-input {
             -webkit-appearance: none;
@@ -326,7 +326,7 @@
             background-position: right 1.4rem center;
             background-size: 11px 18px;
         }
-        select.cc-input:invalid { color: rgba(255, 255, 255, 0.5); }
+        select.cc-input:invalid { color: rgba(255, 255, 255, 0.75); }
         select.cc-input option { color: #1a1a1a; background-color: #fff; }
 
         textarea.cc-input {
@@ -345,6 +345,7 @@
             gap: 0.7rem;
             font-size: 1.0625rem;
             line-height: 1.4;
+            min-height: 2.25rem;
             color: #fff;
             cursor: pointer;
         }
@@ -402,6 +403,15 @@
             text-align: center;
         }
 
+        .cc-req { color: #fff; font-style: normal; margin-left: 0.15rem; }
+        .cc-required-note { grid-column: 1 / -1; margin: -0.5rem 0 0; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.85); }
+        .cc-call { margin: 0; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.9); text-align: center; }
+        .cc-call a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+        .cc-call a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            .cc-input, .cc-check input, .cc-submit { transition: none; }
+            .cc-submit:hover, .cc-check input:hover { transform: none; }
+        }
         .cc-success { max-width: 36rem; margin: 0 auto; text-align: center; outline: none; }
         .cc-success-icon {
             width: 3.5rem;
@@ -551,6 +561,12 @@
                                                     <span class="text-g text-[11px]">Remove oxidation, restore clarity</span>
                                                 </div>
                                             </a>
+                                            <a href="/ceramic-coating" class="mega-service-item flex items-center gap-3 px-3 py-2.5 group">
+                                                <div>
+                                                    <span class="text-gray-900 text-sm font-semibold block leading-tight">Ceramic Coating</span>
+                                                    <span class="text-g text-[11px]">Enquire online for a quote</span>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
 
@@ -682,6 +698,14 @@
                                         </div>
                                     </a>
 
+                                    <!-- Ceramic coating enquiry -->
+                                    <a href="/ceramic-coating" class="flex items-center gap-4 group">
+                                        <div>
+                                            <p class="text-gray-900 text-sm font-semibold group-hover:text-r" style="transition: color 0.2s ease;">Ceramic coating enquiry</p>
+                                            <p class="text-g text-xs">Tell us about your vehicle</p>
+                                        </div>
+                                    </a>
+
                                     <div class="border-t border-black/5 pt-4">
                                         <a href="/contact" class="btn-red text-sm w-full justify-center">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -744,6 +768,9 @@
                             </a>
                             <a href="/headlight-restoration" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>Headlight Restoration</span><span class="text-r text-xs font-semibold">$100</span>
+                            </a>
+                            <a href="/ceramic-coating" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-g-light hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
+                                <span>Ceramic Coating</span><span class="text-r text-xs font-semibold">Enquire</span>
                             </a>
                             <a href="/auto-detailing" class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-black/[0.03] text-sm text-r font-semibold hover:text-gray-900" style="transition: background 0.2s ease, color 0.2s ease;" onclick="closeMenu()">
                                 <span>View All Packages</span>
@@ -817,22 +844,23 @@
                 <input type="hidden" name="_subject" value="New ceramic coating enquiry - tjmdetailing.com.au">
                 <input type="hidden" name="form" value="Ceramic coating enquiry">
                 <input type="hidden" name="landing_url" value="">
+                <p class="cc-required-note">Fields marked * are required.</p>
 
                 <div class="cc-field">
-                    <label for="cc-name" class="cc-label">Name</label>
+                    <label for="cc-name" class="cc-label">Name<span class="cc-req" aria-hidden="true">*</span></label>
                     <input type="text" id="cc-name" name="name" class="cc-input" autocomplete="name" required>
                 </div>
                 <div class="cc-field">
-                    <label for="cc-email" class="cc-label">Email</label>
-                    <input type="email" id="cc-email" name="email" class="cc-input" autocomplete="email" required>
+                    <label for="cc-email" class="cc-label">Email<span class="cc-req" aria-hidden="true">*</span></label>
+                    <input type="email" id="cc-email" name="email" class="cc-input" autocomplete="email" spellcheck="false" required>
                 </div>
 
                 <div class="cc-field">
-                    <label for="cc-phone" class="cc-label">Phone</label>
-                    <input type="tel" id="cc-phone" name="phone" class="cc-input" autocomplete="tel" required>
+                    <label for="cc-phone" class="cc-label">Phone<span class="cc-req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="cc-phone" name="phone" class="cc-input" autocomplete="tel" inputmode="tel" required>
                 </div>
                 <div class="cc-field">
-                    <label for="cc-timeframe" class="cc-label">When are you looking to get this done?</label>
+                    <label for="cc-timeframe" class="cc-label">When are you looking to get this done?<span class="cc-req" aria-hidden="true">*</span></label>
                     <select id="cc-timeframe" name="timeframe" class="cc-input" required>
                         <option value="" disabled selected>Select an option</option>
                         <option value="Your next available appointment">Your next available appointment</option>
@@ -874,6 +902,7 @@
                 <div class="cc-actions">
                     <button type="submit" class="cc-submit">Send Enquiry</button>
                     <p id="ceramicError" class="cc-error" role="alert" hidden></p>
+                    <p class="cc-call">Prefer to talk it through? Call <a href="tel:0447418866">0447 418 866</a></p>
                 </div>
             </form>
 
